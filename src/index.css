@@ -1,4 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
@@ -9,16 +16,12 @@ body {
   background-color: #ffffff;
   color: #111827;
   font-family:
-    Inter,
+    "Manrope",
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 a {

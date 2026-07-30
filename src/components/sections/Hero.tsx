@@ -16,7 +16,7 @@ export default function Hero() {
           Medellín · Cerro Nutibara
         </p>
 
-        <h1 className="max-w-4xl text-5xl font-semibold tracking-tight md:text-7xl">
+        <h1 className="max-w-3xl text-5xl font-semibold tracking-tight md:text-7xl">
           Residencia El Cerro
         </h1>
 
