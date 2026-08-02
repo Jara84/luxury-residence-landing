@@ -1,24 +1,25 @@
+import { useTranslation } from "react-i18next";
 import Container from "../ui/Container";
 import Section from "../ui/Section";
 
 export default function Introduction() {
+  const { t } = useTranslation();
+
   return (
     <Section>
       <Container>
         <div className="mx-auto max-w-3xl text-center">
 
           <p className="text-sm uppercase tracking-[0.3em] text-stone-500">
-            Residencia privada
+            {t("introduction.label")}
           </p>
 
           <h2 className="mt-6 text-4xl font-medium tracking-tight text-stone-900 md:text-5xl">
-            Un espacio diseñado para vivir Medellín desde una nueva perspectiva
+            {t("introduction.title")}
           </h2>
 
           <p className="mt-8 text-lg leading-relaxed text-stone-600">
-            Una residencia remodelada con acabados de lujo,
-            donde la arquitectura contemporánea, la iluminación natural
-            y la tranquilidad se encuentran en un lugar privilegiado.
+            {t("introduction.description")}
           </p>
 
         </div>
@@ -31,7 +32,7 @@ export default function Introduction() {
               144 m²
             </p>
             <p className="mt-2 text-stone-500">
-              Área privada
+              {t("introduction.stats.area")}
             </p>
           </div>
 
@@ -41,7 +42,7 @@ export default function Introduction() {
               3
             </p>
             <p className="mt-2 text-stone-500">
-              Habitaciones
+              {t("introduction.stats.rooms")}
             </p>
           </div>
 
@@ -51,7 +52,7 @@ export default function Introduction() {
               Medellín
             </p>
             <p className="mt-2 text-stone-500">
-              Cerro Nutibara
+              {t("introduction.stats.location")}
             </p>
           </div>
 

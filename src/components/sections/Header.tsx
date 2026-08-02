@@ -1,6 +1,9 @@
 import Button from "../ui/Button";
+import LanguageSwitcher from "../ui/LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
+  const { t } = useTranslation();
   return (
     <header className="absolute top-0 left-0 z-10 w-full">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
@@ -11,20 +14,22 @@ export default function Header() {
 
         <nav className="hidden items-center gap-8 text-sm text-white md:flex">
           <a href="#residencia">
-            Residencia
+            {t("header.residence")}
           </a>
-
+          
           <a href="#galeria">
-            Galería
+            {t("header.gallery")}
           </a>
 
           <a href="#ubicacion">
-            Ubicación
+            {t("header.location")}
           </a>
         </nav>
 
+        <LanguageSwitcher />
+
         <Button>
-          Agendar visita
+          {t("header.visit")}
         </Button>
 
       </div>

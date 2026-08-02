@@ -4,6 +4,7 @@ import Hero from "./components/sections/Hero";
 import Header from "./components/sections/Header";
 import Introduction from "./components/sections/Introduction";
 import Gallery from "./components/sections/Gallery";
+import Highlights from "./components/sections/Highlights";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <Introduction />
       <Gallery />
+      <Highlights />
     </main>
   );
 }

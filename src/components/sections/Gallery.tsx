@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import Container from "../ui/Container";
 import Section from "../ui/Section";
 
@@ -12,6 +13,8 @@ import balcony from "../../assets/images/balcony.jpg";
 import wc3 from "../../assets/images/wc3.jpg";
 
 export default function Gallery() {
+  const { t } = useTranslation();
+  
   const images = [
     {
       src: heroImage,
@@ -65,11 +68,11 @@ export default function Gallery() {
       <Container>
         <div className="mb-12 text-center">
           <p className="text-sm uppercase tracking-[0.3em] text-stone-500">
-            Galería
+            {t("gallery.label")}
           </p>
 
           <h2 className="mt-4 text-4xl font-medium tracking-tight text-stone-900 md:text-5xl">
-            Cada espacio cuenta una historia
+            {t("gallery.title")}
           </h2>
         </div>
 

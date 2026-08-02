@@ -1,8 +1,13 @@
+import { useTranslation } from "react-i18next";
+
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 import heroImage from "../../assets/images/hero.jpg";
 
+
 export default function Hero() {
+  const { t } = useTranslation();
+
   return (
   <section
     className="relative min-h-screen bg-cover bg-center"
@@ -13,21 +18,20 @@ export default function Hero() {
     <Container>
       <div className="relative flex min-h-screen flex-col items-center justify-center text-center text-white">
         <p className="mb-6 text-sm uppercase tracking-[0.3em] text-stone-200">
-          Medellín · Cerro Nutibara
+          {t("hero.location")}
         </p>
 
         <h1 className="max-w-3xl text-5xl font-semibold tracking-tight md:text-7xl">
-          Residencia El Cerro
+          {t("hero.title")}
         </h1>
 
         <p className="mt-8 max-w-2xl text-lg text-stone-200 md:text-xl">
-          Un apartamento remodelado con acabados de lujo,
-          diseñado para vivir una experiencia única en Medellín.
+          {t("hero.description")}
         </p>
 
         <div className="mt-10">
           <Button>
-            Agendar visita privada
+            {t("hero.button")}
           </Button>
         </div>
       </div>
