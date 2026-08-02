@@ -16,15 +16,34 @@ const es = {
 
   introduction: {
     label: "Residencia privada",
+
     title:
       "Un espacio diseñado para vivir Medellín desde una nueva perspectiva",
+
     description:
       "Una residencia remodelada con acabados de lujo, donde la arquitectura contemporánea, la iluminación natural y la tranquilidad se encuentran en un lugar privilegiado.",
 
-    stats: {
-      area: "Área privada",
-      rooms: "Habitaciones",
-      location: "Cerro Nutibara",
+    cards: {
+      area: {
+        value: "144 m²",
+        title: "Área privada",
+        description:
+          "Amplio espacio contemporáneo con acabados de lujo.",
+      },
+
+      rooms: {
+        value: "3 Habitaciones",
+        title: "3 Baños · Vestier",
+        description:
+          "Diseñado para una vida familiar cómoda.",
+      },
+
+      location: {
+        value: "Ubicación privilegiada",
+        title: "Cerro Nutibara",
+        description:
+          "A pocos minutos de Provenza, El Poblado y la Milla de Oro.",
+      },
     },
   },
 
@@ -42,17 +61,20 @@ const es = {
     rooms: {
       title:
         "3 habitaciones, 3 baños, amplio vestier, alacena, zona de ropas y balcón",
-      description: "Ambientes cómodos con privacidad y amplitud",
+      description:
+        "Ambientes cómodos con privacidad y amplitud",
     },
 
     view: {
       title: "Vista Medellín",
-      description: "Una ubicación privilegiada en El Cerro Nutibara",
+      description:
+        "Una ubicación privilegiada en El Cerro Nutibara",
     },
 
     design: {
       title: "Diseño contemporáneo",
-      description: "Acabados premium y arquitectura renovada",
+      description:
+        "Acabados premium y arquitectura renovada",
     },
   },
 };

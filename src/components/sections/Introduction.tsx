@@ -1,6 +1,14 @@
 import { useTranslation } from "react-i18next";
+
+import {
+  Ruler,
+  BedDouble,
+  MapPinned,
+} from "lucide-react";
+
 import Container from "../ui/Container";
 import Section from "../ui/Section";
+import PremiumStatCard from "../ui/PremiumStatCard";
 
 export default function Introduction() {
   const { t } = useTranslation();
@@ -9,7 +17,6 @@ export default function Introduction() {
     <Section>
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-
           <p className="text-sm uppercase tracking-[0.3em] text-stone-500">
             {t("introduction.label")}
           </p>
@@ -21,43 +28,30 @@ export default function Introduction() {
           <p className="mt-8 text-lg leading-relaxed text-stone-600">
             {t("introduction.description")}
           </p>
-
         </div>
 
+        <div className="mt-20 grid gap-8 md:grid-cols-3">
+          <PremiumStatCard
+            icon={Ruler}
+            value={t("introduction.cards.area.value")}
+            title={t("introduction.cards.area.title")}
+            description={t("introduction.cards.area.description")}
+          />
 
-        <div className="mt-16 grid gap-8 text-center md:grid-cols-3">
+          <PremiumStatCard
+            icon={BedDouble}
+            value={t("introduction.cards.rooms.value")}
+            title={t("introduction.cards.rooms.title")}
+            description={t("introduction.cards.rooms.description")}
+          />
 
-          <div>
-            <p className="text-4xl font-semibold text-stone-900">
-              144 m²
-            </p>
-            <p className="mt-2 text-stone-500">
-              {t("introduction.stats.area")}
-            </p>
-          </div>
-
-
-          <div>
-            <p className="text-4xl font-semibold text-stone-900">
-              3
-            </p>
-            <p className="mt-2 text-stone-500">
-              {t("introduction.stats.rooms")}
-            </p>
-          </div>
-
-
-          <div>
-            <p className="text-4xl font-semibold text-stone-900">
-              Medellín
-            </p>
-            <p className="mt-2 text-stone-500">
-              {t("introduction.stats.location")}
-            </p>
-          </div>
-
+          <PremiumStatCard
+            icon={MapPinned}
+            value={t("introduction.cards.location.value")}
+            title={t("introduction.cards.location.title")}
+            description={t("introduction.cards.location.description")}
+          />
         </div>
-
       </Container>
     </Section>
   );

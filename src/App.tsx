@@ -1,8 +1,9 @@
 import "./App.css";
 
-import Hero from "./components/sections/Hero";
 import Header from "./components/sections/Header";
+import Hero from "./components/sections/Hero";
 import Introduction from "./components/sections/Introduction";
+import Lifestyle from "./components/sections/Lifestyle";
 import Gallery from "./components/sections/Gallery";
 import Highlights from "./components/sections/Highlights";
 
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Hero />
       <Introduction />
+      <Lifestyle />
       <Gallery />
       <Highlights />
     </main>
