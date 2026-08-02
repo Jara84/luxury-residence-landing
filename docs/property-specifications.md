@@ -209,6 +209,8 @@ Retired Couple
 
 Recently renovated
 
+Air Conditioning: 2 x 24,000 BTU Air Conditioning Units
+
 Luxury finishes
 
 Premium lighting

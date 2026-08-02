@@ -43,5 +43,64 @@ const en = {
       },
     },
   },
+
+  gallery: {
+    label: "Gallery",
+    title: "Explore Every Detail",
+    description:
+      "Every space has been thoughtfully redesigned to combine elegance, comfort and functionality.",
+  },
+
+  lifestyle: {
+    label: "Lifestyle",
+
+    title: "Designed for Modern Living",
+
+    description:
+      "Every detail of this residence has been carefully renovated to deliver comfort, elegance and functionality.",
+
+    interiorTitle: "Interior Features",
+
+    lifestyleTitle: "Lifestyle",
+
+    interior: {
+      dishwasher: "Built-in Dishwasher",
+      kitchen: "Contemporary Kitchen",
+      pantry: "Pantry",
+      laundry: "Laundry Room",
+      airConditioning: "Dual 24,000 BTU Air Conditioning System",
+    },
+
+    features: {
+      location: "Prime Location",
+      light: "Natural Light",
+      neighborhood: "Quiet Residential Area",
+      premiumFinishes: "Luxury Finishes",
+    },
+  },
+
+  highlights: {
+    area: {
+      title: "144 m²",
+      description: "Private area designed to enjoy every space",
+    },
+
+    rooms: {
+      title:
+        "3 bedrooms, 3 bathrooms, walk-in closet, pantry, laundry room and balcony",
+      description: "Comfortable spaces with privacy and openness",
+    },
+
+    view: {
+      title: "Medellín Views",
+      description: "A privileged location at Cerro Nutibara",
+    },
+
+    design: {
+      title: "Contemporary Design",
+      description: "Premium finishes and renovated architecture",
+    },
+  },
 };
+
 export default en;

@@ -39,7 +39,7 @@ const es = {
       },
 
       location: {
-        value: "Ubicación privilegiada",
+        value: "Ubicación Premium",
         title: "Cerro Nutibara",
         description:
           "A pocos minutos de Provenza, El Poblado y la Milla de Oro.",
@@ -49,7 +49,38 @@ const es = {
 
   gallery: {
     label: "Galería",
-    title: "Cada espacio cuenta una historia",
+    title: "Explora cada detalle",
+    description:
+      "Cada espacio ha sido cuidadosamente remodelado para combinar elegancia, comodidad y funcionalidad.",
+  },
+
+  lifestyle: {
+    label: "Estilo de vida",
+
+    title: "Diseñado para la vida moderna",
+
+    description:
+      "Cada detalle de esta residencia ha sido cuidadosamente renovado para ofrecer confort, elegancia y funcionalidad.",
+
+    interiorTitle: "Características interiores",
+
+    lifestyleTitle: "Estilo de vida",
+
+    interior: {
+      dishwasher: "Lavavajillas empotrado",
+      kitchen: "Cocina contemporánea",
+      pantry: "Alacena",
+      laundry: "Zona de ropas",
+      airConditioning:
+        "Sistema dual de aire acondicionado de 24.000 BTU",
+    },
+
+    features: {
+      location: "Ubicación Premium",
+      light: "Iluminación natural",
+      neighborhood: "Sector residencial tranquilo",
+      premiumFinishes: "Acabados de lujo",
+    },
   },
 
   highlights: {
@@ -61,20 +92,17 @@ const es = {
     rooms: {
       title:
         "3 habitaciones, 3 baños, amplio vestier, alacena, zona de ropas y balcón",
-      description:
-        "Ambientes cómodos con privacidad y amplitud",
+      description: "Ambientes cómodos con privacidad y amplitud",
     },
 
     view: {
       title: "Vista Medellín",
-      description:
-        "Una ubicación privilegiada en El Cerro Nutibara",
+      description: "Una ubicación privilegiada en El Cerro Nutibara",
     },
 
     design: {
       title: "Diseño contemporáneo",
-      description:
-        "Acabados premium y arquitectura renovada",
+      description: "Acabados premium y arquitectura renovada",
     },
   },
 };
