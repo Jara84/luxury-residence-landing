@@ -116,6 +116,29 @@ const en = {
       description:
         "Two 24,000 BTU air conditioning systems provide exceptional comfort year-round.",
     },
+  location: {
+    label: "The Location",
+
+    title: "Connected to Everything, Surrounded by Nature",
+
+    description:
+      "Located on Cerro Nutibara, the residence offers quick access to Medellín's financial district, dining, entertainment and green spaces.",
+
+    walking: "Walking Distance",
+
+    mapLabel: "Prime Location",
+
+    mapDescription:
+      "Perfectly positioned between the city's business, cultural and residential districts.",
+
+    items: {
+      alpujarra: "La Alpujarra",
+      provenza: "Provenza",
+      milla: "Milla de Oro",
+      nutibara: "Cerro Nutibara Park",
+      airport: "José María Córdova Airport",
+    },
+  },  
 
     renovation: {
       title: "Complete Luxury Renovation",

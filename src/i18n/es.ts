@@ -127,6 +127,29 @@ const es = {
         "Materiales premium, iluminación personalizada y diseño contemporáneo transforman cada espacio de la residencia.",
     },
   },
+location: {
+  label: "La Ubicación",
+
+  title: "Conectado con toda la ciudad, rodeado de naturaleza",
+
+  description:
+    "Ubicada en el Cerro Nutibara, esta residencia ofrece acceso rápido al distrito financiero, la oferta gastronómica, zonas de entretenimiento y espacios verdes de Medellín.",
+
+  walking: "A pocos pasos",
+
+  mapLabel: "Ubicación privilegiada",
+
+  mapDescription:
+    "Una ubicación estratégica entre el centro administrativo, El Poblado y los principales corredores de la ciudad.",
+
+  items: {
+    alpujarra: "La Alpujarra",
+    provenza: "Provenza",
+    milla: "Milla de Oro",
+    nutibara: "Parque Cerro Nutibara",
+    airport: "Aeropuerto José María Córdova",
+  },
+},
 
   highlights: {
     area: {
