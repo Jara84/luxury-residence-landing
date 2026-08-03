@@ -79,6 +79,51 @@ const en = {
     },
   },
 
+  signature: {
+    label: "Signature Features",
+
+    title: "A Residence Designed Around Everyday Luxury",
+
+    description:
+      "Every major renovation was carefully planned to create a residence that combines architecture, comfort, technology and timeless elegance.",
+
+    architecture: {
+      title: "Double-Height Architecture",
+      description:
+        "Approximately 4-meter ceilings create a remarkable sense of space, openness and natural light.",
+    },
+
+    balconies: {
+      title: "Three Private Balconies",
+      description:
+        "One main balcony plus two additional balconies seamlessly connect indoor and outdoor living.",
+    },
+
+    masterSuite: {
+      title: "Luxury Master Suite",
+      description:
+        "Walk-in closet, bathtub, double vanity and premium finishes designed for comfort.",
+    },
+
+    smartLiving: {
+      title: "Smart Living",
+      description:
+        "Built-in dishwasher, integrated charging stations, dedicated double workstation and custom storage solutions throughout the residence.",
+    },
+
+    climate: {
+      title: "Dual Climate Control",
+      description:
+        "Two 24,000 BTU air conditioning systems provide exceptional comfort year-round.",
+    },
+
+    renovation: {
+      title: "Complete Luxury Renovation",
+      description:
+        "Premium materials, custom lighting and contemporary design transform every space.",
+    },
+  },
+
   highlights: {
     area: {
       title: "144 m²",
