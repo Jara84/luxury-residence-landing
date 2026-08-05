@@ -146,7 +146,20 @@ const en = {
         "Premium materials, custom lighting and contemporary design transform every space.",
     },
   },
+  privateViewing: {
+    label: "Private Viewing",
 
+    title: "Experience El Cerro Boutique Residence in Person",
+
+    description:
+      "Schedule a private visit and discover the architecture, finishes and lifestyle that make this residence truly unique.",
+
+    responseTime: "Response within 1 hour",
+
+    schedule: "Schedule a Private Visit",
+
+    brochure: "Property Brochure (Coming Soon)",
+  },
   highlights: {
     area: {
       title: "144 m²",

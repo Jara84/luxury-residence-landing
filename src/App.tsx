@@ -7,6 +7,7 @@ import Lifestyle from "./components/sections/Lifestyle";
 import SignatureFeatures from "./components/sections/SignatureFeatures";
 import Gallery from "./components/sections/Gallery";
 import TheLocation from "./components/sections/TheLocation";
+import PrivateViewing from "./components/sections/PrivateViewing";
 import Highlights from "./components/sections/Highlights";
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
       <Gallery />
 
       <TheLocation />
+      
+      <PrivateViewing />
 
       <Highlights />
     </main>

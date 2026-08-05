@@ -127,30 +127,43 @@ const es = {
         "Materiales premium, iluminación personalizada y diseño contemporáneo transforman cada espacio de la residencia.",
     },
   },
-location: {
-  label: "La Ubicación",
+  location: {
+    label: "La Ubicación",
 
-  title: "Conectado con toda la ciudad, rodeado de naturaleza",
+    title: "Conectado con toda la ciudad, rodeado de naturaleza",
 
-  description:
-    "Ubicada en el Cerro Nutibara, esta residencia ofrece acceso rápido al distrito financiero, la oferta gastronómica, zonas de entretenimiento y espacios verdes de Medellín.",
+    description:
+      "Ubicada en el Cerro Nutibara, esta residencia ofrece acceso rápido al distrito financiero, la oferta gastronómica, zonas de entretenimiento y espacios verdes de Medellín.",
 
-  walking: "A pocos pasos",
+    walking: "A pocos pasos",
 
-  mapLabel: "Ubicación privilegiada",
+    mapLabel: "Ubicación privilegiada",
 
-  mapDescription:
-    "Una ubicación estratégica entre el centro administrativo, El Poblado y los principales corredores de la ciudad.",
+    mapDescription:
+      "Una ubicación estratégica entre el centro administrativo, El Poblado y los principales corredores de la ciudad.",
 
-  items: {
-    alpujarra: "La Alpujarra",
-    provenza: "Provenza",
-    milla: "Milla de Oro",
-    nutibara: "Parque Cerro Nutibara",
-    airport: "Aeropuerto José María Córdova",
+    items: {
+      alpujarra: "La Alpujarra",
+      provenza: "Provenza",
+      milla: "Milla de Oro",
+      nutibara: "Parque Cerro Nutibara",
+      airport: "Aeropuerto José María Córdova",
+    },
   },
-},
+  privateViewing: {
+    label: "Visita Privada",
 
+    title: "Descubra El Cerro Boutique Residence en persona",
+
+    description:
+      "Agende una visita privada y conozca de primera mano la arquitectura, los acabados y el estilo de vida que hacen única esta residencia.",
+
+    responseTime: "Respuesta estimada en menos de 1 hora",
+
+    schedule: "Agendar Visita Privada",
+
+    brochure: "Brochure de la Propiedad (Próximamente)",
+  },
   highlights: {
     area: {
       title: "144 m²",
