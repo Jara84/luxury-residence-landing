@@ -35,11 +35,11 @@ export default function PrivateViewing() {
           {/* Acciones */}
           <div className="flex flex-col gap-5">
             <a
-              href="https://wa.me/+573002276016"
+              href="https://wa.me/573002276016"
               target="_blank"
               rel="noopener noreferrer"
               className="
-                flex
+                inline-flex
                 items-center
                 justify-center
                 gap-3
@@ -47,18 +47,20 @@ export default function PrivateViewing() {
                 bg-white
                 px-8
                 py-5
-                text-lg
                 font-semibold
                 text-stone-900
+                no-underline
                 transition-all
                 duration-300
                 hover:-translate-y-1
+                hover:bg-stone-100
                 hover:shadow-xl
               "
             >
-              <MessageCircle size={22} />
-
-              {t("privateViewing.schedule")}
+              <MessageCircle className="h-5 w-5 text-stone-900" />
+              <span className="text-stone-900">
+                {t("privateViewing.schedule")}
+              </span>
             </a>
 
             <button

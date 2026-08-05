@@ -8,7 +8,7 @@ import SignatureFeatures from "./components/sections/SignatureFeatures";
 import Gallery from "./components/sections/Gallery";
 import TheLocation from "./components/sections/TheLocation";
 import PrivateViewing from "./components/sections/PrivateViewing";
-import Highlights from "./components/sections/Highlights";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
@@ -29,7 +29,8 @@ function App() {
       
       <PrivateViewing />
 
-      <Highlights />
+      <Footer />    
+      
     </main>
   );
 }
