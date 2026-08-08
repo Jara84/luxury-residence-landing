@@ -12,28 +12,43 @@ export default function FeatureItem({
   return (
     <div
       className="
+        group
         flex
         items-center
         gap-4
         rounded-xl
         p-3
-        transition-colors
+        transition-all
         duration-300
+        ease-out
         hover:bg-stone-50
+        hover:translate-x-1
       "
     >
-      <div
+    <div
+      className="
+        flex
+        h-10
+        w-10
+        items-center
+        justify-center
+        rounded-full
+        bg-stone-100
+        transition-colors
+        duration-300
+        group-hover:bg-stone-900
+      "
+    >
+      <Icon
         className="
-          flex
-          h-10
-          w-10
-          items-center
-          justify-center
-          rounded-full
-          bg-stone-100
+          h-5
+          w-5
+          text-stone-700
+          transition-colors
+          duration-300
+          group-hover:text-white
         "
-      >
-        <Icon className="h-5 w-5 text-stone-700" />
+      />
       </div>
 
       <span className="text-lg text-stone-800">

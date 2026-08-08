@@ -14,7 +14,7 @@ import kitchen from "../../assets/images/kitchen.jpg";
 import kitchen2 from "../../assets/images/kitchen2.jpg";
 import balcony from "../../assets/images/balcony.jpg";
 import wc3 from "../../assets/images/wc3.jpg";
-
+import FadeIn from "../ui/FadeIn";
 export default function Gallery() {
   const { t } = useTranslation();
 
@@ -104,44 +104,47 @@ export default function Gallery() {
 
   return (
     <>
-      <Section>
-        <Container>
-          <div className="mb-12 text-center">
-            <p className="text-sm uppercase tracking-[0.3em] text-stone-500">
-              {t("gallery.label")}
-            </p>
+      <Section id="galeria">
+        <FadeIn>
+          <Container>
+            <div className="mb-12 text-center">
+              <p className="text-sm uppercase tracking-[0.3em] text-stone-500">
+                {t("gallery.label")}
+              </p>
 
-            <h2 className="mt-4 text-4xl font-medium tracking-tight text-stone-900 md:text-5xl">
-              {t("gallery.title")}
-            </h2>
+              <h2 className="mt-4 text-4xl font-medium tracking-tight text-stone-900 md:text-5xl">
+                {t("gallery.title")}
+              </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-stone-600">
-              {t("gallery.description")}
-            </p>
-          </div>
+              <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-stone-600">
+                {t("gallery.description")}
+              </p>
+            </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
-            {images.map((image, index) => (
-              <img
-                key={image.src}
-                src={image.src}
-                alt={image.alt}
-                onClick={() => setSelectedIndex(index)}
-                className={`
-                  ${image.className}
-                  w-full
-                  cursor-pointer
-                  rounded-2xl
-                  object-cover
-                  transition-all
-                  duration-500
-                  hover:scale-[1.02]
-                  hover:shadow-xl
-                `}
-              />
-            ))}
-          </div>
-        </Container>
+            <div className="grid gap-6 md:grid-cols-2">
+              {images.map((image, index) => (
+                <img
+                  key={image.src}
+                  src={image.src}
+                  alt={image.alt}
+                  onClick={() => setSelectedIndex(index)}
+                  className={`
+                    ${image.className}
+                    w-full
+                    cursor-pointer
+                    rounded-2xl
+                    object-cover
+                    transition-all
+                    duration-500
+                    hover:scale-[1.02]
+                    hover:shadow-xl
+                    group-hover:scale-105
+                  `}
+                />
+              ))}
+            </div>
+          </Container>
+        </FadeIn>
       </Section>
 
       {selectedIndex !== null && (

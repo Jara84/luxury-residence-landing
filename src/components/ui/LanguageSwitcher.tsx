@@ -1,6 +1,12 @@
 import { useTranslation } from "react-i18next";
 
-export default function LanguageSwitcher() {
+type LanguageSwitcherProps = {
+  scrolled?: boolean;
+};
+
+export default function LanguageSwitcher({
+  scrolled = false,
+}: LanguageSwitcherProps) {
   const { i18n } = useTranslation();
 
   const changeLanguage = (language: "es" | "en") => {
@@ -8,13 +14,17 @@ export default function LanguageSwitcher() {
     localStorage.setItem("language", language);
   };
 
+  const textColor = scrolled ? "text-stone-700" : "text-white";
+
   return (
-    <div className="flex items-center gap-2 text-sm text-white">
+    <div
+      className={`flex items-center gap-2 text-sm transition-colors duration-300 ${textColor}`}
+    >
       <button
         onClick={() => changeLanguage("es")}
         className={
           i18n.language === "es"
-            ? "font-semibold"
+            ? "font-semibold opacity-100"
             : "opacity-60 hover:opacity-100"
         }
       >
@@ -27,7 +37,7 @@ export default function LanguageSwitcher() {
         onClick={() => changeLanguage("en")}
         className={
           i18n.language === "en"
-            ? "font-semibold"
+            ? "font-semibold opacity-100"
             : "opacity-60 hover:opacity-100"
         }
       >

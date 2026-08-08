@@ -1,5 +1,6 @@
 const en = {
   header: {
+    brand: "El Cerro Residence",
     residence: "Residence",
     gallery: "Gallery",
     location: "Location",
@@ -8,7 +9,8 @@ const en = {
 
   hero: {
     location: "Medellín · Cerro Nutibara",
-    title: "El Cerro Residence",
+    title: "El Cerro Boutique Residence",
+    subtitle: "Boutique Residence",
     description:
       "A fully renovated residence with premium finishes, designed to offer an exceptional living experience in Medellín.",
     button: "Schedule a private visit",

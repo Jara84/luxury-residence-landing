@@ -19,12 +19,15 @@
     return (
       <button
         className={`
-          rounded-xl
-          px-8
-          py-4
+          px-6
+          py-3
+          text-sm
           font-medium
+          rounded-xl
           transition
           duration-300
+          hover:scale-[1.02]
+          active:scale-[0.98]
           ${styles[variant]}
         `}
       >

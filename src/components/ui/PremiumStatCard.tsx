@@ -19,15 +19,16 @@ export default function PremiumStatCard({
         group
         flex
         flex-col
-        rounded-[32px]
+        rounded-4xl
         border
         border-stone-200/70
         bg-white
         p-10
-        min-h-[360px]
+        min-h-90
         transition-all
-        duration-500
-        hover:-translate-y-2
+        duration-300
+        ease-out
+        hover:-translate-y-1
         hover:shadow-2xl
       "
     >

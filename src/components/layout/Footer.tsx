@@ -30,14 +30,14 @@ export default function Footer() {
             >
               <MessageCircle className="h-5 w-5" />
 
-              <span>WhatsApp</span>
+              <span>Contact via WhatsApp</span>
             </a>
 
           </div>
         </div>
 
         <div className="mt-12 border-t border-stone-200 pt-8 text-sm text-stone-400">
-          © 2026 El Cerro Boutique Residence. All rights reserved.
+          © 2026 · El Cerro Boutique Residence
         </div>
       </Container>
     </footer>

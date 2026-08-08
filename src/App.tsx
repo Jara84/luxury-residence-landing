@@ -1,6 +1,6 @@
 import "./App.css";
 
-import Header from "./components/sections/Header";
+import Header from "./components/layout/Header";
 import Hero from "./components/sections/Hero";
 import Introduction from "./components/sections/Introduction";
 import Lifestyle from "./components/sections/Lifestyle";

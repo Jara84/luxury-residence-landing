@@ -14,6 +14,7 @@ export default function LocationItem({
   return (
     <div
       className="
+        group
         flex
         items-center
         justify-between
@@ -25,12 +26,31 @@ export default function LocationItem({
         py-5
         transition-all
         duration-300
-        hover:shadow-lg
+        ease-out
+        hover:-translate-y-1
+        hover:shadow-xl
       "
     >
       <div className="flex items-center gap-4">
-        <div className="rounded-xl bg-stone-100 p-3">
-          <Icon size={24} className="text-stone-700" />
+        <div
+          className="
+            rounded-xl
+            bg-stone-100
+            p-3
+            transition-colors
+            duration-300
+            group-hover:bg-stone-900
+          "
+        >
+          <Icon
+            size={24}
+            className="
+              text-stone-700
+              transition-colors
+              duration-300
+              group-hover:text-white
+            "
+          />
         </div>
 
         <span className="text-lg font-medium text-stone-800">
