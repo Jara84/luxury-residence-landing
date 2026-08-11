@@ -14,7 +14,6 @@ import kitchen from "../../assets/images/kitchen.jpg";
 import kitchen2 from "../../assets/images/kitchen2.jpg";
 import balcony from "../../assets/images/balcony.jpg";
 import wc3 from "../../assets/images/wc3.jpg";
-import FadeIn from "../ui/FadeIn";
 export default function Gallery() {
   const { t } = useTranslation();
 
@@ -105,7 +104,6 @@ export default function Gallery() {
   return (
     <>
       <Section id="galeria">
-        <FadeIn>
           <Container>
             <div className="mb-12 text-center">
               <p className="text-sm uppercase tracking-[0.3em] text-stone-500">
@@ -144,7 +142,6 @@ export default function Gallery() {
               ))}
             </div>
           </Container>
-        </FadeIn>
       </Section>
 
       {selectedIndex !== null && (
