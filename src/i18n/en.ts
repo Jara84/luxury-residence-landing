@@ -17,31 +17,34 @@ const en = {
   },
 
   introduction: {
-    label: "Private Residence",
+    label: "Private Boutique Residence",
 
-    title: "A home designed to experience Medellín from a new perspective",
+    title:
+      "A private residence designed to experience Medellín differently",
 
     description:
-      "A renovated residence with luxury finishes, where contemporary architecture, natural light and tranquility come together in a privileged location.",
+      "A fully renovated 144 m² residence where generous proportions, refined finishes and natural light create an exceptional sense of comfort and privacy.",
 
     cards: {
       area: {
         value: "144 m²",
-        title: "Private Living Area",
-        description: "Spacious contemporary layout with luxury finishes.",
+        title: "Generous Private Area",
+        description:
+          "Thoughtfully designed spaces with premium finishes and exceptional proportions.",
       },
 
       rooms: {
         value: "3 Bedrooms",
         title: "3 Bathrooms · Walk-in Closet",
-        description: "Perfect for modern family living.",
+        description:
+          "A refined residential layout designed for comfort, privacy and everyday living.",
       },
 
       location: {
-        value: "Prime Location",
-        title: "Cerro Nutibara",
+        value: "Cerro Nutibara",
+        title: "A Distinctive Location",
         description:
-          "Minutes from Provenza, El Poblado and Medellín's business district.",
+          "Minutes from El Poblado, Provenza and Medellín's main business and lifestyle districts.",
       },
     },
   },
@@ -118,6 +121,12 @@ const en = {
       description:
         "Two 24,000 BTU air conditioning systems provide exceptional comfort year-round.",
     },
+
+    renovation: {
+      title: "Complete Luxury Renovation",
+      description:
+        "Premium materials, custom lighting and contemporary design transform every space.",
+    },
   },
 
   location: {
@@ -144,12 +153,6 @@ const en = {
     },
   },
 
-  renovation: {
-    title: "Complete Luxury Renovation",
-    description:
-      "Premium materials, custom lighting and contemporary design transform every space.",
-  },
-
   privateViewing: {
     label: "Private Viewing",
 
@@ -166,25 +169,31 @@ const en = {
   },
 
   highlights: {
+    label: "The Residence",
+
+    title: "Space designed around the way you live",
+
+    description:
+      "A thoughtfully renovated residence where generous proportions, privacy and a privileged location come together.",
+
     area: {
       title: "144 m²",
-      description: "Private area designed to enjoy every space",
+      description: "Generous private living area",
     },
 
     rooms: {
-      title:
-        "3 bedrooms, 3 bathrooms, walk-in closet, pantry, laundry room and balcony",
-      description: "Comfortable spaces with privacy and openness",
+      title: "3 · 3",
+      description: "Bedrooms · Bathrooms",
     },
 
-    view: {
-      title: "Medellín Views",
-      description: "A privileged location at Cerro Nutibara",
+    balconies: {
+      title: "3 Balconies",
+      description: "Private outdoor spaces",
     },
 
-    design: {
-      title: "Contemporary Design",
-      description: "Premium finishes and renovated architecture",
+    ceiling: {
+      title: "≈ 4 m",
+      description: "Approximate ceiling height",
     },
   },
 };

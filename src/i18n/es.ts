@@ -17,34 +17,34 @@ const es = {
   },
 
   introduction: {
-    label: "Residencia privada",
+    label: "Residencia Boutique Privada",
 
     title:
-      "Un espacio diseñado para vivir Medellín desde una nueva perspectiva",
+      "Una residencia privada para vivir Medellín de una manera diferente",
 
     description:
-      "Una residencia remodelada con acabados de lujo, donde la arquitectura contemporánea, la iluminación natural y la tranquilidad se encuentran en un lugar privilegiado.",
+      "Una residencia de 144 m² completamente remodelada, donde la amplitud, los acabados de lujo y la iluminación natural crean una extraordinaria sensación de confort y privacidad.",
 
     cards: {
       area: {
         value: "144 m²",
-        title: "Área privada",
+        title: "Amplia Área Privada",
         description:
-          "Amplio espacio contemporáneo con acabados de lujo.",
+          "Espacios cuidadosamente diseñados con acabados de lujo y proporciones excepcionales.",
       },
 
       rooms: {
         value: "3 Habitaciones",
         title: "3 Baños · Vestier",
         description:
-          "Diseñado para una vida familiar cómoda.",
+          "Una distribución residencial sofisticada diseñada para el confort, la privacidad y la vida cotidiana.",
       },
 
       location: {
-        value: "Ubicación Premium",
-        title: "Cerro Nutibara",
+        value: "Cerro Nutibara",
+        title: "Una Ubicación Singular",
         description:
-          "A pocos minutos de Provenza, El Poblado y la Milla de Oro.",
+          "A pocos minutos de El Poblado, Provenza y los principales distritos empresariales y de entretenimiento de Medellín.",
       },
     },
   },
@@ -122,6 +122,12 @@ const es = {
       description:
         "Dos sistemas de aire acondicionado de 24.000 BTU garantizan confort durante todo el año.",
     },
+
+    renovation: {
+      title: "Remodelación integral de lujo",
+      description:
+        "Materiales premium, iluminación personalizada y diseño contemporáneo transforman cada espacio de la residencia.",
+    },
   },
 
   location: {
@@ -148,12 +154,6 @@ const es = {
     },
   },
 
-  renovation: {
-    title: "Remodelación integral de lujo",
-    description:
-      "Materiales premium, iluminación personalizada y diseño contemporáneo transforman cada espacio de la residencia.",
-  },
-
   privateViewing: {
     label: "Visita Privada",
 
@@ -170,25 +170,31 @@ const es = {
   },
 
   highlights: {
+    label: "La Residencia",
+
+    title: "Espacios diseñados alrededor de tu forma de vivir",
+
+    description:
+      "Una residencia cuidadosamente remodelada donde la amplitud, la privacidad y una ubicación privilegiada se encuentran.",
+
     area: {
       title: "144 m²",
-      description: "Área privada diseñada para disfrutar cada espacio",
+      description: "Amplia área privada",
     },
 
     rooms: {
-      title:
-        "3 habitaciones, 3 baños, amplio vestier, alacena, zona de ropas y balcón",
-      description: "Ambientes cómodos con privacidad y amplitud",
+      title: "3 · 3",
+      description: "Habitaciones · Baños",
     },
 
-    view: {
-      title: "Vista Medellín",
-      description: "Una ubicación privilegiada en El Cerro Nutibara",
+    balconies: {
+      title: "3 Balcones",
+      description: "Espacios exteriores privados",
     },
 
-    design: {
-      title: "Diseño contemporáneo",
-      description: "Acabados premium y arquitectura renovada",
+    ceiling: {
+      title: "≈ 4 m",
+      description: "Altura aproximada de los techos",
     },
   },
 };
