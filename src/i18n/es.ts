@@ -50,11 +50,58 @@ const es = {
   },
 
   gallery: {
-    label: "Galería",
-    title: "Explora cada detalle",
-    description:
-      "Cada espacio ha sido cuidadosamente remodelado para combinar elegancia, comodidad y funcionalidad.",
+  label: "Galería",
+  title: "Cada espacio, cuidadosamente diseñado",
+  description:
+    "Descubra los espacios que definen esta residencia: amplitud, luz natural, acabados de lujo y una conexión privilegiada con Medellín.",
+
+  images: {
+    openSocialArea: {
+      title: "Área social abierta",
+      category: "Área social",
+    },
+
+    livingRoom: {
+      title: "Sala principal",
+      category: "Área social",
+    },
+
+    livingRoomDetail: {
+      title: "Detalle de la sala",
+      category: "Área social",
+    },
+
+    contemporaryKitchen: {
+      title: "Cocina contemporánea",
+      category: "Cocina",
+    },
+
+    kitchenIsland: {
+      title: "Isla de cocina",
+      category: "Cocina",
+    },
+
+    mainBalcony: {
+      title: "Balcón principal",
+      category: "Exterior",
+    },
+
+    masterBedroom: {
+      title: "Habitación principal",
+      category: "Master Suite",
+    },
+
+    homeOffice: {
+      title: "Estudio privado",
+      category: "Estudio",
+    },
+
+    guestBathroom: {
+      title: "Baño social",
+      category: "Baños",
+    },
   },
+},
 
   lifestyle: {
     label: "Estilo de vida",

@@ -50,10 +50,57 @@ const en = {
   },
 
   gallery: {
-    label: "Gallery",
-    title: "Explore Every Detail",
+    label: "The Residence",
+    title: "Every Space, Thoughtfully Designed",
     description:
-      "Every space has been thoughtfully redesigned to combine elegance, comfort and functionality.",
+      "Explore the spaces that define this residence: generous proportions, natural light, refined finishes and a privileged connection to Medellín.",
+
+    images: {
+      openSocialArea: {
+        title: "Open Social Area",
+        category: "Social Area",
+      },
+
+      livingRoom: {
+        title: "Main Living Room",
+        category: "Social Area",
+      },
+
+      livingRoomDetail: {
+        title: "Living Room Detail",
+        category: "Social Area",
+      },
+
+      contemporaryKitchen: {
+        title: "Contemporary Kitchen",
+        category: "Kitchen",
+      },
+
+      kitchenIsland: {
+        title: "Kitchen Island",
+        category: "Kitchen",
+      },
+
+      mainBalcony: {
+        title: "Main Balcony",
+        category: "Outdoor",
+      },
+
+      masterBedroom: {
+        title: "Master Bedroom",
+        category: "Master Suite",
+      },
+
+      homeOffice: {
+        title: "Private Study",
+        category: "Study",
+      },
+
+      guestBathroom: {
+        title: "Guest Bathroom",
+        category: "Bathrooms",
+      },
+    },
   },
 
   lifestyle: {

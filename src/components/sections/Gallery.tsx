@@ -22,65 +22,65 @@ export default function Gallery() {
   const images = [
     {
       src: heroImage,
-      title: "Open Social Area",
-      category: "Social Area",
-      alt: "Open social area with living room, dining room and kitchen.",
+      title: t("gallery.images.socialArea.title"),
+      category: t("gallery.images.socialArea.category"),
+      alt: t("gallery.images.socialArea.alt"),
       className: "md:col-span-2 h-[600px]",
     },
     {
       src: livingRoom,
-      title: "Living Room",
-      category: "Social Area",
-      alt: "Main living room.",
+      title: t("gallery.images.livingRoom.title"),
+      category: t("gallery.images.livingRoom.category"),
+      alt: t("gallery.images.livingRoom.alt"),
       className: "h-[350px]",
     },
     {
       src: livingRoom2,
-      title: "Living Room Detail",
-      category: "Social Area",
-      alt: "Living room detail.",
+      title: t("gallery.images.livingRoomDetail.title"),
+      category: t("gallery.images.livingRoomDetail.category"),
+      alt: t("gallery.images.livingRoomDetail.alt"),
       className: "h-[350px]",
     },
     {
       src: kitchen,
-      title: "Contemporary Kitchen",
-      category: "Kitchen",
-      alt: "Contemporary kitchen.",
+      title: t("gallery.images.kitchen.title"),
+      category: t("gallery.images.kitchen.category"),
+      alt: t("gallery.images.kitchen.alt"),
       className: "h-[350px]",
     },
     {
       src: kitchen2,
-      title: "Kitchen Island",
-      category: "Kitchen",
-      alt: "Kitchen island and premium finishes.",
+      title: t("gallery.images.kitchenIsland.title"),
+      category: t("gallery.images.kitchenIsland.category"),
+      alt: t("gallery.images.kitchenIsland.alt"),
       className: "h-[350px]",
     },
     {
       src: balcony,
-      title: "Main Balcony",
-      category: "Outdoor",
-      alt: "Main balcony overlooking Medellín.",
+      title: t("gallery.images.balcony.title"),
+      category: t("gallery.images.balcony.category"),
+      alt: t("gallery.images.balcony.alt"),
       className: "h-[350px]",
     },
     {
       src: mainRoom,
-      title: "Master Bedroom",
-      category: "Master Suite",
-      alt: "Master bedroom.",
+      title: t("gallery.images.masterBedroom.title"),
+      category: t("gallery.images.masterBedroom.category"),
+      alt: t("gallery.images.masterBedroom.alt"),
       className: "h-[350px]",
     },
     {
       src: livingRoom3,
-      title: "Home Office",
-      category: "Study",
-      alt: "Double home office.",
+      title: t("gallery.images.homeOffice.title"),
+      category: t("gallery.images.homeOffice.category"),
+      alt: t("gallery.images.homeOffice.alt"),
       className: "h-[350px]",
     },
     {
       src: wc3,
-      title: "Guest Bathroom",
-      category: "Bathrooms",
-      alt: "Guest bathroom.",
+      title: t("gallery.images.guestBathroom.title"),
+      category: t("gallery.images.guestBathroom.category"),
+      alt: t("gallery.images.guestBathroom.alt"),
       className: "h-[350px]",
     },
   ];
@@ -121,24 +121,52 @@ export default function Gallery() {
 
             <div className="grid gap-6 md:grid-cols-2">
               {images.map((image, index) => (
-                <img
+                <div
                   key={image.src}
-                  src={image.src}
-                  alt={image.alt}
-                  onClick={() => setSelectedIndex(index)}
-                  className={`
-                    ${image.className}
-                    w-full
-                    cursor-pointer
-                    rounded-2xl
-                    object-cover
-                    transition-all
-                    duration-500
-                    hover:scale-[1.02]
-                    hover:shadow-xl
-                    group-hover:scale-105
-                  `}
-                />
+                  className={`group relative overflow-hidden rounded-2xl ${image.className}`}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    onClick={() => setSelectedIndex(index)}
+                    className="
+                      h-full
+                      w-full
+                      cursor-pointer
+                      object-cover
+                      transition-transform
+                      duration-700
+                      group-hover:scale-[1.02]
+                    "
+                  />
+
+                  <div
+                    className="
+                      pointer-events-none
+                      absolute
+                      inset-x-0
+                      bottom-0
+                      bg-gradient-to-t
+                      from-black/70
+                      via-black/20
+                      to-transparent
+                      p-6
+                      pt-16
+                      opacity-0
+                      transition-opacity
+                      duration-500
+                      group-hover:opacity-100
+                    "
+                  >
+                    <p className="text-xs uppercase tracking-[0.25em] text-white/70">
+                      {image.category}
+                    </p>
+
+                    <p className="mt-2 text-lg font-medium text-white">
+                      {image.title}
+                    </p>
+                  </div>
+                </div>
               ))}
             </div>
           </Container>
