@@ -8,11 +8,11 @@ const es = {
   },
 
   hero: {
-    location: "Medellín · Cerro Nutibara",
+    location: "RESIDENCIA BOUTIQUE PRIVADA",
     title: "El Cerro Boutique Residence",
-    subtitle: "Boutique Residence",
+    subtitle: "Una residencia privada de lujo en Medellín",
     description:
-      "Una residencia completamente remodelada con acabados de lujo, diseñada para ofrecer una experiencia de vida excepcional en Medellín.",
+      "Una residencia de 144 m² completamente remodelada, donde el diseño contemporáneo, la iluminación natural y los acabados de lujo se encuentran en una de las ubicaciones más singulares de Medellín.",
     button: "Agendar visita privada",
   },
 

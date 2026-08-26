@@ -93,7 +93,15 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <LanguageSwitcher scrolled={scrolled} />
 
-          <Button>{t("header.visit")}</Button>
+          <Button
+            onClick={() => {
+              document
+                .getElementById("private-viewing")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            {t("header.visit")}
+          </Button>
         </div>
       </div>
     </header>

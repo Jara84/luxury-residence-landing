@@ -9,7 +9,7 @@ export default function PrivateViewing() {
   const { t } = useTranslation();
 
   return (
-    <Section className="bg-stone-900 text-white">
+    <Section id="private-viewing" className="bg-stone-900 text-white">
       <FadeIn>
          <Container>
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">

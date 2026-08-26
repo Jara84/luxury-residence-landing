@@ -21,17 +21,28 @@ export default function Hero() {
           <p className="mb-6 text-xs uppercase tracking-[0.45em] text-stone-200">
             {t("hero.location")}
           </p>
-
           <h1 className="mx-auto max-w-5xl text-5xl font-medium tracking-tight md:text-7xl">
             {t("hero.title")}
           </h1>
 
-          <p className="mt-8 max-w-3xl text-lg leading-relaxed text-stone-200 md:text-xl">
+          <p className="mt-6 text-xl font-light tracking-wide text-stone-200 md:text-2xl">
+            {t("hero.subtitle")}
+          </p>
+
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-stone-200 md:text-xl">
             {t("hero.description")}
           </p>
 
           <div className="mt-12">
-            <Button>{t("hero.button")}</Button>
+            <Button
+              onClick={() => {
+                document
+                  .getElementById("private-viewing")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              {t("hero.button")}
+            </Button>
           </div>
 
           {/* Scroll Indicator */}
