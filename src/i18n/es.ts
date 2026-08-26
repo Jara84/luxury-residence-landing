@@ -122,13 +122,8 @@ const es = {
       description:
         "Dos sistemas de aire acondicionado de 24.000 BTU garantizan confort durante todo el año.",
     },
-
-    renovation: {
-      title: "Remodelación integral de lujo",
-      description:
-        "Materiales premium, iluminación personalizada y diseño contemporáneo transforman cada espacio de la residencia.",
-    },
   },
+
   location: {
     label: "La Ubicación",
 
@@ -152,6 +147,13 @@ const es = {
       airport: "Aeropuerto José María Córdova",
     },
   },
+
+  renovation: {
+    title: "Remodelación integral de lujo",
+    description:
+      "Materiales premium, iluminación personalizada y diseño contemporáneo transforman cada espacio de la residencia.",
+  },
+
   privateViewing: {
     label: "Visita Privada",
 
@@ -166,6 +168,7 @@ const es = {
 
     brochure: "Brochure de la Propiedad (Próximamente)",
   },
+
   highlights: {
     area: {
       title: "144 m²",

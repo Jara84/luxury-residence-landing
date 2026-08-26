@@ -118,6 +118,8 @@ const en = {
       description:
         "Two 24,000 BTU air conditioning systems provide exceptional comfort year-round.",
     },
+  },
+
   location: {
     label: "The Location",
 
@@ -140,14 +142,14 @@ const en = {
       nutibara: "Cerro Nutibara Park",
       airport: "José María Córdova Airport",
     },
-  },  
-
-    renovation: {
-      title: "Complete Luxury Renovation",
-      description:
-        "Premium materials, custom lighting and contemporary design transform every space.",
-    },
   },
+
+  renovation: {
+    title: "Complete Luxury Renovation",
+    description:
+      "Premium materials, custom lighting and contemporary design transform every space.",
+  },
+
   privateViewing: {
     label: "Private Viewing",
 
@@ -162,6 +164,7 @@ const en = {
 
     brochure: "Property Brochure (Coming Soon)",
   },
+
   highlights: {
     area: {
       title: "144 m²",
