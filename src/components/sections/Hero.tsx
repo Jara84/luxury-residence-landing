@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 
-import heroImage from "../../assets/images/hero.jpg";
+import heroImage from "../../assets/images/entrada.jpg";
 
 export default function Hero() {
   const { t } = useTranslation();

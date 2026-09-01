@@ -5,15 +5,16 @@ import Container from "../ui/Container";
 import Section from "../ui/Section";
 import Lightbox from "../ui/Lightbox";
 
-import heroImage from "../../assets/images/hero.jpg";
-import mainRoom from "../../assets/images/main-room.jpg";
-import livingRoom from "../../assets/images/living-room.jpg";
-import livingRoom2 from "../../assets/images/living-room2.jpg";
-import livingRoom3 from "../../assets/images/living-room3.jpg";
-import kitchen from "../../assets/images/kitchen.jpg";
-import kitchen2 from "../../assets/images/kitchen2.jpg";
-import balcony from "../../assets/images/balcony.jpg";
-import wc3 from "../../assets/images/wc3.jpg";
+import ppalSocial from "../../assets/images/ppal_social.jpg";
+import entrada from "../../assets/images/entrada.jpg";
+import ppalIsla from "../../assets/images/ppal_isla.jpg";
+import ppalSala from "../../assets/images/ppal_sala.jpg";
+import cafe from "../../assets/images/cafe.jpg";
+import cocina from "../../assets/images/cocina.jpg";
+import sala from "../../assets/images/sala.jpg";
+import mainBath from "../../assets/images/main_bath.jpg";
+import banoSocial from "../../assets/images/bano_social.jpg";
+
 export default function Gallery() {
   const { t } = useTranslation();
 
@@ -21,67 +22,67 @@ export default function Gallery() {
 
   const images = [
     {
-      src: heroImage,
-      title: t("gallery.images.socialArea.title"),
-      category: t("gallery.images.socialArea.category"),
-      alt: t("gallery.images.socialArea.alt"),
-      className: "md:col-span-2 h-[600px]",
+      src: ppalSocial,
+      category: t("gallery.images.hero.category"),
+      title: t("gallery.images.hero.title"),
+      alt: t("gallery.images.hero.title"),
+      className: "md:col-span-2 h-[420px] md:h-[560px]",
     },
     {
-      src: livingRoom,
-      title: t("gallery.images.livingRoom.title"),
-      category: t("gallery.images.livingRoom.category"),
-      alt: t("gallery.images.livingRoom.alt"),
-      className: "h-[350px]",
+      src: entrada,
+      category: t("gallery.images.entrance.category"),
+      title: t("gallery.images.entrance.title"),
+      alt: t("gallery.images.entrance.title"),
+      className: "h-[320px] md:h-[400px]",
     },
     {
-      src: livingRoom2,
-      title: t("gallery.images.livingRoomDetail.title"),
-      category: t("gallery.images.livingRoomDetail.category"),
-      alt: t("gallery.images.livingRoomDetail.alt"),
-      className: "h-[350px]",
+      src: ppalIsla,
+      category: t("gallery.images.island.category"),
+      title: t("gallery.images.island.title"),
+      alt: t("gallery.images.island.title"),
+      className: "h-[320px] md:h-[400px]",
     },
     {
-      src: kitchen,
-      title: t("gallery.images.kitchen.title"),
+      src: ppalSala,
+      category: t("gallery.images.social.category"),
+      title: t("gallery.images.social.title"),
+      alt: t("gallery.images.social.title"),
+      className: "md:col-span-2 h-[360px] md:h-[460px]",
+    },
+    {
+      src: cafe,
+      category: t("gallery.images.detail.category"),
+      title: t("gallery.images.detail.title"),
+      alt: t("gallery.images.detail.title"),
+      className: "h-[320px] md:h-[400px]",
+    },
+    {
+      src: cocina,
       category: t("gallery.images.kitchen.category"),
-      alt: t("gallery.images.kitchen.alt"),
-      className: "h-[350px]",
+      title: t("gallery.images.kitchen.title"),
+      alt: t("gallery.images.kitchen.title"),
+      className: "h-[320px] md:h-[400px]",
     },
     {
-      src: kitchen2,
-      title: t("gallery.images.kitchenIsland.title"),
-      category: t("gallery.images.kitchenIsland.category"),
-      alt: t("gallery.images.kitchenIsland.alt"),
-      className: "h-[350px]",
+      src: sala,
+      category: t("gallery.images.living.category"),
+      title: t("gallery.images.living.title"),
+      alt: t("gallery.images.living.title"),
+      className: "h-[320px] md:h-[400px]",
     },
     {
-      src: balcony,
-      title: t("gallery.images.balcony.title"),
-      category: t("gallery.images.balcony.category"),
-      alt: t("gallery.images.balcony.alt"),
-      className: "h-[350px]",
+      src: mainBath,
+      category: t("gallery.images.masterBath.category"),
+      title: t("gallery.images.masterBath.title"),
+      alt: t("gallery.images.masterBath.title"),
+      className: "h-[320px] md:h-[400px]",
     },
     {
-      src: mainRoom,
-      title: t("gallery.images.masterBedroom.title"),
-      category: t("gallery.images.masterBedroom.category"),
-      alt: t("gallery.images.masterBedroom.alt"),
-      className: "h-[350px]",
-    },
-    {
-      src: livingRoom3,
-      title: t("gallery.images.homeOffice.title"),
-      category: t("gallery.images.homeOffice.category"),
-      alt: t("gallery.images.homeOffice.alt"),
-      className: "h-[350px]",
-    },
-    {
-      src: wc3,
-      title: t("gallery.images.guestBathroom.title"),
-      category: t("gallery.images.guestBathroom.category"),
-      alt: t("gallery.images.guestBathroom.alt"),
-      className: "h-[350px]",
+      src: banoSocial,
+      category: t("gallery.images.bathroom.category"),
+      title: t("gallery.images.bathroom.title"),
+      alt: t("gallery.images.bathroom.title"),
+      className: "h-[320px] md:h-[400px]",
     },
   ];
 
@@ -104,72 +105,48 @@ export default function Gallery() {
   return (
     <>
       <Section id="galeria">
-          <Container>
-            <div className="mb-12 text-center">
-              <p className="text-sm uppercase tracking-[0.3em] text-stone-500">
-                {t("gallery.label")}
-              </p>
+        <Container>
+          <div className="mb-12 text-center">
+            <p className="text-sm uppercase tracking-[0.3em] text-stone-500">
+              {t("gallery.label")}
+            </p>
 
-              <h2 className="mt-4 text-4xl font-medium tracking-tight text-stone-900 md:text-5xl">
-                {t("gallery.title")}
-              </h2>
+            <h2 className="mt-4 text-4xl font-medium tracking-tight text-stone-900 md:text-5xl">
+              {t("gallery.title")}
+            </h2>
 
-              <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-stone-600">
-                {t("gallery.description")}
-              </p>
-            </div>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-stone-600">
+              {t("gallery.description")}
+            </p>
+          </div>
 
-            <div className="grid gap-6 md:grid-cols-2">
-              {images.map((image, index) => (
-                <div
-                  key={image.src}
-                  className={`group relative overflow-hidden rounded-2xl ${image.className}`}
-                >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    onClick={() => setSelectedIndex(index)}
-                    className="
-                      h-full
-                      w-full
-                      cursor-pointer
-                      object-cover
-                      transition-transform
-                      duration-700
-                      group-hover:scale-[1.02]
-                    "
-                  />
+          <div className="grid gap-6 md:grid-cols-2">
+            {images.map((image, index) => (
+              <button
+                key={image.src}
+                type="button"
+                onClick={() => setSelectedIndex(index)}
+                className={`group relative overflow-hidden rounded-2xl text-left ${image.className}`}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                />
 
-                  <div
-                    className="
-                      pointer-events-none
-                      absolute
-                      inset-x-0
-                      bottom-0
-                      bg-gradient-to-t
-                      from-black/70
-                      via-black/20
-                      to-transparent
-                      p-6
-                      pt-16
-                      opacity-0
-                      transition-opacity
-                      duration-500
-                      group-hover:opacity-100
-                    "
-                  >
-                    <p className="text-xs uppercase tracking-[0.25em] text-white/70">
-                      {image.category}
-                    </p>
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent p-6 pt-16">
+                  <p className="text-xs uppercase tracking-[0.25em] text-white/75">
+                    {image.category}
+                  </p>
 
-                    <p className="mt-2 text-lg font-medium text-white">
-                      {image.title}
-                    </p>
-                  </div>
+                  <h3 className="mt-2 text-xl font-medium text-white md:text-2xl">
+                    {image.title}
+                  </h3>
                 </div>
-              ))}
-            </div>
-          </Container>
+              </button>
+            ))}
+          </div>
+        </Container>
       </Section>
 
       {selectedIndex !== null && (

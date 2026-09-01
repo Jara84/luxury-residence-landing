@@ -34,17 +34,17 @@ const en = {
       },
 
       rooms: {
-        value: "3 Bedrooms",
+        value: "3",
         title: "3 Bathrooms · Walk-in Closet",
         description:
           "A refined residential layout designed for comfort, privacy and everyday living.",
       },
 
-      location: {
-        value: "Cerro Nutibara",
-        title: "A Distinctive Location",
+      ceiling: {
+        value: "4 m",
+        title: "Double-Height Space",
         description:
-          "Minutes from El Poblado, Provenza and Medellín's main business and lifestyle districts.",
+          "An extraordinary sense of space, natural light and sophistication.",
       },
     },
   },
@@ -56,49 +56,49 @@ const en = {
       "Explore the spaces that define this residence: generous proportions, natural light, refined finishes and a privileged connection to Medellín.",
 
     images: {
-      openSocialArea: {
-        title: "Open Social Area",
+      hero: {
         category: "Social Area",
+        title: "Open Social Area",
       },
 
       livingRoom: {
-        title: "Main Living Room",
         category: "Social Area",
+        title: "Living Room",
       },
 
-      livingRoomDetail: {
+      livingRoom2: {
+        category: "Social Area",
         title: "Living Room Detail",
-        category: "Social Area",
       },
 
-      contemporaryKitchen: {
+      kitchen: {
+        category: "Kitchen",
         title: "Contemporary Kitchen",
-        category: "Kitchen",
       },
 
-      kitchenIsland: {
+      kitchen2: {
+        category: "Kitchen",
         title: "Kitchen Island",
-        category: "Kitchen",
       },
 
-      mainBalcony: {
-        title: "Main Balcony",
+      balcony: {
         category: "Outdoor",
+        title: "Main Balcony",
       },
 
-      masterBedroom: {
-        title: "Master Bedroom",
+      mainRoom: {
         category: "Master Suite",
+        title: "Master Bedroom",
       },
 
       homeOffice: {
-        title: "Private Study",
         category: "Study",
+        title: "Double Home Office",
       },
 
-      guestBathroom: {
-        title: "Guest Bathroom",
+      wc3: {
         category: "Bathrooms",
+        title: "Guest Bathroom",
       },
     },
   },
@@ -233,14 +233,16 @@ const en = {
       description: "Bedrooms · Bathrooms",
     },
 
+    ceiling: {
+      value: "≈ 4 m",
+      title: "Double-height space",
+      description:
+        "An exceptional sense of space, openness and natural light.",
+    },
+
     balconies: {
       title: "3 Balconies",
       description: "Private outdoor spaces",
-    },
-
-    ceiling: {
-      title: "≈ 4 m",
-      description: "Approximate ceiling height",
     },
   },
 };

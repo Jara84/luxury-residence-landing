@@ -1,10 +1,6 @@
 import { useTranslation } from "react-i18next";
 import FadeIn from "../ui/FadeIn";
-import {
-  Ruler,
-  BedDouble,
-  MapPinned,
-} from "lucide-react";
+import { Ruler, BedDouble, MoveUp } from "lucide-react";
 
 import Container from "../ui/Container";
 import Section from "../ui/Section";
@@ -17,7 +13,7 @@ export default function Introduction() {
     <Section id="residencia">
       <FadeIn>
         <Container>
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto max-w-4xl text-center">
             <p className="text-sm uppercase tracking-[0.3em] text-stone-500">
               {t("introduction.label")}
             </p>
@@ -26,12 +22,12 @@ export default function Introduction() {
               {t("introduction.title")}
             </h2>
 
-            <p className="mt-8 text-lg leading-relaxed text-stone-600">
+            <p className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-stone-600 md:text-xl">
               {t("introduction.description")}
             </p>
           </div>
 
-          <div className="mt-20 grid gap-8 md:grid-cols-3">
+          <div className="mt-16 grid gap-6 md:grid-cols-3">
             <PremiumStatCard
               icon={Ruler}
               value={t("introduction.cards.area.value")}
@@ -47,10 +43,10 @@ export default function Introduction() {
             />
 
             <PremiumStatCard
-              icon={MapPinned}
-              value={t("introduction.cards.location.value")}
-              title={t("introduction.cards.location.title")}
-              description={t("introduction.cards.location.description")}
+              icon={MoveUp}
+              value={t("introduction.cards.ceiling.value")}
+              title={t("introduction.cards.ceiling.title")}
+              description={t("introduction.cards.ceiling.description")}
             />
           </div>
         </Container>

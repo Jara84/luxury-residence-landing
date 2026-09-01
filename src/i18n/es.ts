@@ -34,74 +34,76 @@ const es = {
       },
 
       rooms: {
-        value: "3 Habitaciones",
+        value: "3",
         title: "3 Baños · Vestier",
         description:
           "Una distribución residencial sofisticada diseñada para el confort, la privacidad y la vida cotidiana.",
       },
 
-      location: {
-        value: "Cerro Nutibara",
-        title: "Una Ubicación Singular",
+      ceiling: {
+        value: "4 m",
+        title: "Doble altura",
         description:
-          "A pocos minutos de El Poblado, Provenza y los principales distritos empresariales y de entretenimiento de Medellín.",
+          "Una extraordinaria sensación de amplitud, luminosidad y sofisticación.",
       },
     },
   },
 
   gallery: {
-  label: "Galería",
-  title: "Cada espacio, cuidadosamente diseñado",
-  description:
-    "Descubra los espacios que definen esta residencia: amplitud, luz natural, acabados de lujo y una conexión privilegiada con Medellín.",
+    label: "Galería",
 
-  images: {
-    openSocialArea: {
-      title: "Área social abierta",
-      category: "Área social",
-    },
+    title: "Cada espacio, cuidadosamente diseñado",
 
-    livingRoom: {
-      title: "Sala principal",
-      category: "Área social",
-    },
+    description:
+      "Descubra los espacios que definen esta residencia: amplitud, luz natural, acabados de lujo y una conexión privilegiada con Medellín.",
 
-    livingRoomDetail: {
-      title: "Detalle de la sala",
-      category: "Área social",
-    },
+    images: {
+      hero: {
+        category: "Área social",
+        title: "Área social abierta",
+      },
 
-    contemporaryKitchen: {
-      title: "Cocina contemporánea",
-      category: "Cocina",
-    },
+      livingRoom: {
+        category: "Área social",
+        title: "Sala principal",
+      },
 
-    kitchenIsland: {
-      title: "Isla de cocina",
-      category: "Cocina",
-    },
+      livingRoom2: {
+        category: "Área social",
+        title: "Detalle de la sala",
+      },
 
-    mainBalcony: {
-      title: "Balcón principal",
-      category: "Exterior",
-    },
+      kitchen: {
+        category: "Cocina",
+        title: "Cocina contemporánea",
+      },
 
-    masterBedroom: {
-      title: "Habitación principal",
-      category: "Master Suite",
-    },
+      kitchen2: {
+        category: "Cocina",
+        title: "Isla de cocina",
+      },
 
-    homeOffice: {
-      title: "Estudio privado",
-      category: "Estudio",
-    },
+      balcony: {
+        category: "Exterior",
+        title: "Balcón principal",
+      },
 
-    guestBathroom: {
-      title: "Baño social",
-      category: "Baños",
+      mainRoom: {
+        category: "Suite principal",
+        title: "Habitación principal",
+      },
+
+      homeOffice: {
+        category: "Estudio",
+        title: "Estudio doble",
+      },
+
+      wc3: {
+        category: "Baños",
+        title: "Baño social",
+      },
     },
   },
-},
 
   lifestyle: {
     label: "Estilo de vida",
@@ -234,14 +236,16 @@ const es = {
       description: "Habitaciones · Baños",
     },
 
+    ceiling: {
+      value: "≈ 4 m",
+      title: "Doble altura",
+      description:
+        "Una extraordinaria sensación de amplitud, luminosidad y sofisticación.",
+    },
+
     balconies: {
       title: "3 Balcones",
       description: "Espacios exteriores privados",
-    },
-
-    ceiling: {
-      title: "≈ 4 m",
-      description: "Altura aproximada de los techos",
     },
   },
 };
