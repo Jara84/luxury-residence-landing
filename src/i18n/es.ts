@@ -142,9 +142,9 @@ const es = {
         title: "Vista hacia la ciudad y las montañas",
       },
 
-      viewStreet: {
-        category: "Vistas",
-        title: "Entorno arbolado desde la residencia",
+      balcony2: {
+        category: "Exterior",
+        title: "Salida a balcón auxiliar",
       },
     },
   },

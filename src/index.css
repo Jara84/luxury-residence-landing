@@ -24,9 +24,14 @@ body {
     sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Debe ir en @layer base: fuera de una capa, esta regla le gana a cualquier
+   utilidad text-* de Tailwind sobre un <a>, porque el CSS sin capa tiene
+   prioridad sobre el CSS en capas. Eso dejaba botones con texto invisible. */
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 button {

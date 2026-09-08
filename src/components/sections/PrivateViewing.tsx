@@ -61,8 +61,8 @@ export default function PrivateViewing() {
                 onClick={() => trackWhatsapp("private_viewing")}
                 className="inline-flex items-center justify-center gap-3 rounded-2xl bg-white px-8 py-5 font-semibold text-stone-900 no-underline transition-all duration-300 hover:-translate-y-1 hover:bg-stone-100 hover:shadow-xl"
               >
-                <MessageCircle className="h-5 w-5" />
-                <span>{t("privateViewing.schedule")}</span>
+                <MessageCircle className="h-5 w-5 text-stone-900" />
+                <span className="text-stone-900">{t("privateViewing.schedule")}</span>
               </a>
 
               <a

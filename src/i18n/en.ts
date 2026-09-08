@@ -142,9 +142,9 @@ const en = {
         title: "City and mountain views",
       },
 
-      viewStreet: {
-        category: "Views",
-        title: "Tree-lined surroundings",
+      balcony2: {
+        category: "Outdoor",
+        title: "Access to the secondary balcony",
       },
     },
   },

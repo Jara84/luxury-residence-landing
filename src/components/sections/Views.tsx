@@ -11,7 +11,7 @@ export default function Views() {
   const items = [
     { name: "balcony",     category: t("views.images.balcony.category"),    title: t("views.images.balcony.title") },
     { name: "view-city",   category: t("views.images.viewCity.category"),   title: t("views.images.viewCity.title") },
-    { name: "view-street", category: t("views.images.viewStreet.category"), title: t("views.images.viewStreet.title") },
+    { name: "balcony-2",   category: t("views.images.balcony2.category"),   title: t("views.images.balcony2.title") },
   ];
 
   return (
