@@ -3,103 +3,44 @@ import { useTranslation } from "react-i18next";
 
 import Container from "../ui/Container";
 import Section from "../ui/Section";
-import Lightbox from "../ui/Lightbox";
+import Lightbox, { type LightboxImage } from "../ui/Lightbox";
+import Picture from "../ui/Picture";
+import { trackGallery } from "../../lib/analytics";
 
-import ppalSocial from "../../assets/images/ppal_social.jpg";
-import entrada from "../../assets/images/entrada.jpg";
-import ppalIsla from "../../assets/images/ppal_isla.jpg";
-import ppalSala from "../../assets/images/ppal_sala.jpg";
-import cafe from "../../assets/images/cafe.jpg";
-import cocina from "../../assets/images/cocina.jpg";
-import sala from "../../assets/images/sala.jpg";
-import mainBath from "../../assets/images/main_bath.jpg";
-import banoSocial from "../../assets/images/bano_social.jpg";
+/** Ancho real que ocupa la tarjeta, para que el navegador baje el archivo correcto. */
+const SIZES_WIDE = "(min-width: 1280px) 1216px, 100vw";
+const SIZES_HALF = "(min-width: 1280px) 596px, (min-width: 768px) 50vw, 100vw";
+
+/** name = archivo en /public/img · key = nodo en gallery.images del i18n */
+const ITEMS: { name: string; key: string; className: string; wide?: boolean }[] = [
+  { name: "social-open",    key: "socialOpen",    className: "md:col-span-2 h-[300px] sm:h-[420px] md:h-[560px]", wide: true },
+  { name: "living",         key: "living",        className: "h-[280px] md:h-[400px]" },
+  { name: "kitchen-island", key: "kitchenIsland", className: "h-[280px] md:h-[400px]" },
+  { name: "kitchen",        key: "kitchen",       className: "md:col-span-2 h-[300px] sm:h-[360px] md:h-[460px]", wide: true },
+  { name: "kitchen-bar",    key: "kitchenBar",    className: "h-[280px] md:h-[400px]" },
+  { name: "pantry",         key: "pantry",        className: "h-[280px] md:h-[400px]" },
+  { name: "master-bedroom", key: "masterBedroom", className: "h-[280px] md:h-[400px]" },
+  { name: "master-closet",  key: "masterCloset",  className: "h-[280px] md:h-[400px]" },
+  { name: "master-bath",    key: "masterBath",    className: "h-[280px] md:h-[400px]" },
+  { name: "bath-2",         key: "bath2",         className: "h-[280px] md:h-[400px]" },
+  { name: "bedroom-2",      key: "bedroom2",      className: "h-[280px] md:h-[400px]" },
+  { name: "laundry",        key: "laundry",       className: "h-[280px] md:h-[400px]" },
+];
 
 export default function Gallery() {
   const { t } = useTranslation();
-
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const images = [
-    {
-      src: ppalSocial,
-      category: t("gallery.images.hero.category"),
-      title: t("gallery.images.hero.title"),
-      alt: t("gallery.images.hero.title"),
-      className: "md:col-span-2 h-[420px] md:h-[560px]",
-    },
-    {
-      src: entrada,
-      category: t("gallery.images.entrance.category"),
-      title: t("gallery.images.entrance.title"),
-      alt: t("gallery.images.entrance.title"),
-      className: "h-[320px] md:h-[400px]",
-    },
-    {
-      src: ppalIsla,
-      category: t("gallery.images.island.category"),
-      title: t("gallery.images.island.title"),
-      alt: t("gallery.images.island.title"),
-      className: "h-[320px] md:h-[400px]",
-    },
-    {
-      src: ppalSala,
-      category: t("gallery.images.social.category"),
-      title: t("gallery.images.social.title"),
-      alt: t("gallery.images.social.title"),
-      className: "md:col-span-2 h-[360px] md:h-[460px]",
-    },
-    {
-      src: cafe,
-      category: t("gallery.images.detail.category"),
-      title: t("gallery.images.detail.title"),
-      alt: t("gallery.images.detail.title"),
-      className: "h-[320px] md:h-[400px]",
-    },
-    {
-      src: cocina,
-      category: t("gallery.images.kitchen.category"),
-      title: t("gallery.images.kitchen.title"),
-      alt: t("gallery.images.kitchen.title"),
-      className: "h-[320px] md:h-[400px]",
-    },
-    {
-      src: sala,
-      category: t("gallery.images.living.category"),
-      title: t("gallery.images.living.title"),
-      alt: t("gallery.images.living.title"),
-      className: "h-[320px] md:h-[400px]",
-    },
-    {
-      src: mainBath,
-      category: t("gallery.images.masterBath.category"),
-      title: t("gallery.images.masterBath.title"),
-      alt: t("gallery.images.masterBath.title"),
-      className: "h-[320px] md:h-[400px]",
-    },
-    {
-      src: banoSocial,
-      category: t("gallery.images.bathroom.category"),
-      title: t("gallery.images.bathroom.title"),
-      alt: t("gallery.images.bathroom.title"),
-      className: "h-[320px] md:h-[400px]",
-    },
-  ];
+  const images: LightboxImage[] = ITEMS.map((item) => ({
+    name: item.name,
+    category: t(`gallery.images.${item.key}.category`),
+    title: t(`gallery.images.${item.key}.title`),
+    alt: t(`gallery.images.${item.key}.title`),
+  }));
 
-  const previousImage = () => {
-    if (selectedIndex === null) return;
-
-    setSelectedIndex(
-      selectedIndex === 0 ? images.length - 1 : selectedIndex - 1
-    );
-  };
-
-  const nextImage = () => {
-    if (selectedIndex === null) return;
-
-    setSelectedIndex(
-      selectedIndex === images.length - 1 ? 0 : selectedIndex + 1
-    );
+  const open = (index: number) => {
+    setSelectedIndex(index);
+    trackGallery(ITEMS[index].name);
   };
 
   return (
@@ -111,7 +52,7 @@ export default function Gallery() {
               {t("gallery.label")}
             </p>
 
-            <h2 className="mt-4 text-4xl font-medium tracking-tight text-stone-900 md:text-5xl">
+            <h2 className="mt-4 text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl md:text-5xl">
               {t("gallery.title")}
             </h2>
 
@@ -120,27 +61,29 @@ export default function Gallery() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
-            {images.map((image, index) => (
+          <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
+            {ITEMS.map((item, index) => (
               <button
-                key={image.src}
+                key={item.name}
                 type="button"
-                onClick={() => setSelectedIndex(index)}
-                className={`group relative overflow-hidden rounded-2xl text-left ${image.className}`}
+                onClick={() => open(index)}
+                aria-label={images[index].title}
+                className={`group relative overflow-hidden rounded-2xl bg-stone-200 text-left ${item.className}`}
               >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                <Picture
+                  name={item.name}
+                  alt={images[index].alt}
+                  sizes={item.wide ? SIZES_WIDE : SIZES_HALF}
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                 />
 
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent p-6 pt-16">
-                  <p className="text-xs uppercase tracking-[0.25em] text-white/75">
-                    {image.category}
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent p-5 pt-16 sm:p-6">
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-white/75 sm:text-xs">
+                    {images[index].category}
                   </p>
 
-                  <h3 className="mt-2 text-xl font-medium text-white md:text-2xl">
-                    {image.title}
+                  <h3 className="mt-2 text-lg font-medium text-white sm:text-xl md:text-2xl">
+                    {images[index].title}
                   </h3>
                 </div>
               </button>
@@ -154,8 +97,12 @@ export default function Gallery() {
           images={images}
           currentIndex={selectedIndex}
           onClose={() => setSelectedIndex(null)}
-          onPrevious={previousImage}
-          onNext={nextImage}
+          onPrevious={() =>
+            setSelectedIndex((i) => (i === 0 ? images.length - 1 : (i ?? 0) - 1))
+          }
+          onNext={() =>
+            setSelectedIndex((i) => (i === images.length - 1 ? 0 : (i ?? 0) + 1))
+          }
         />
       )}
     </>

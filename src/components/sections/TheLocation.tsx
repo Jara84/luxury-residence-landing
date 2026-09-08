@@ -67,17 +67,25 @@ export default function TheLocation() {
               />
             </div>
 
-            <div className="flex items-center justify-center rounded-[32px] border border-stone-200 bg-white p-12 shadow-sm">
-              <div className="text-center">
+            <div className="overflow-hidden rounded-[32px] border border-stone-200 bg-white shadow-sm">
+              <iframe
+                title={t("location.mapTitle")}
+                src="https://www.google.com/maps?q=Cerro%20Nutibara%2C%20Medell%C3%ADn%2C%20Colombia&z=15&output=embed"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-[280px] w-full border-0 sm:h-[340px]"
+              />
+
+              <div className="p-8 text-center">
                 <p className="text-sm uppercase tracking-[0.3em] text-stone-500">
                   {t("location.mapLabel")}
                 </p>
 
-                <h3 className="mt-4 text-3xl font-semibold text-stone-900">
+                <h3 className="mt-3 text-2xl font-semibold text-stone-900">
                   Cerro Nutibara
                 </h3>
 
-                <p className="mt-6 leading-8 text-stone-600">
+                <p className="mt-4 leading-7 text-stone-600">
                   {t("location.mapDescription")}
                 </p>
               </div>

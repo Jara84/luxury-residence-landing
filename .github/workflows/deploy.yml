@@ -31,6 +31,9 @@ jobs:
 
       - name: Build application
         run: npm run build
+        env:
+          # Configurar en GitHub > Settings > Secrets and variables > Actions > Variables
+          VITE_GA_ID: ${{ vars.VITE_GA_ID }}
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v6

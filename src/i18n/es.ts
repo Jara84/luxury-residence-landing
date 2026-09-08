@@ -1,10 +1,13 @@
 const es = {
   header: {
-    brand: "Residencia El Cerro",
+    brand: "El Cerro Boutique Residence",
     residence: "Residencia",
     gallery: "Galería",
+    views: "Vistas",
     location: "Ubicación",
     visit: "Agendar visita",
+    openMenu: "Abrir menú",
+    closeMenu: "Cerrar menú",
   },
 
   hero: {
@@ -12,15 +15,15 @@ const es = {
     title: "El Cerro Boutique Residence",
     subtitle: "Una residencia privada de lujo en Medellín",
     description:
-      "Una residencia de 144 m² completamente remodelada, donde el diseño contemporáneo, la iluminación natural y los acabados de lujo se encuentran en una de las ubicaciones más singulares de Medellín.",
+      "144 m² completamente remodelados en el tercer y último piso, donde el diseño contemporáneo, la luz natural y los acabados de lujo se encuentran en una de las ubicaciones más singulares de Medellín.",
     button: "Agendar visita privada",
+    alt: "Sala principal con salida al balcón y vista a la ciudad",
   },
 
   introduction: {
     label: "Residencia Boutique Privada",
 
-    title:
-      "Una residencia privada para vivir Medellín de una manera diferente",
+    title: "Una residencia privada para vivir Medellín de una manera diferente",
 
     description:
       "Una residencia de 144 m² completamente remodelada, donde la amplitud, los acabados de lujo y la iluminación natural crean una extraordinaria sensación de confort y privacidad.",
@@ -28,23 +31,23 @@ const es = {
     cards: {
       area: {
         value: "144 m²",
-        title: "Amplia Área Privada",
+        title: "Área privada",
         description:
           "Espacios cuidadosamente diseñados con acabados de lujo y proporciones excepcionales.",
       },
 
       rooms: {
-        value: "3",
-        title: "3 Baños · Vestier",
+        value: "3 · 3",
+        title: "Habitaciones · Baños",
         description:
-          "Una distribución residencial sofisticada diseñada para el confort, la privacidad y la vida cotidiana.",
+          "Suite principal con vestier y bañera, más dos habitaciones y zona de estudio doble.",
       },
 
       ceiling: {
-        value: "4 m",
+        value: "≈ 4 m",
         title: "Doble altura",
         description:
-          "Una extraordinaria sensación de amplitud, luminosidad y sofisticación.",
+          "Tercer y último piso: altura, luz y privacidad que no se consiguen en un piso intermedio.",
       },
     },
   },
@@ -58,49 +61,144 @@ const es = {
       "Descubra los espacios que definen esta residencia: amplitud, luz natural, acabados de lujo y una conexión privilegiada con Medellín.",
 
     images: {
-      hero: {
+      socialOpen: {
         category: "Área social",
-        title: "Área social abierta",
+        title: "Cocina, comedor y sala en un solo espacio",
       },
 
-      livingRoom: {
+      living: {
         category: "Área social",
-        title: "Sala principal",
+        title: "Sala principal con salida al balcón",
       },
 
-      livingRoom2: {
-        category: "Área social",
-        title: "Detalle de la sala",
+      kitchenIsland: {
+        category: "Cocina",
+        title: "Isla central con cubierta en cuarzo",
       },
 
       kitchen: {
         category: "Cocina",
-        title: "Cocina contemporánea",
+        title: "Cocina contemporánea integral",
       },
 
-      kitchen2: {
+      kitchenBar: {
         category: "Cocina",
-        title: "Isla de cocina",
+        title: "Barra, vinoteca y lavavajillas empotrado",
       },
 
+      pantry: {
+        category: "Cocina",
+        title: "Alacena de despensa",
+      },
+
+      masterBedroom: {
+        category: "Suite principal",
+        title: "Habitación principal con carpintería a medida",
+      },
+
+      masterCloset: {
+        category: "Suite principal",
+        title: "Acceso al vestier",
+      },
+
+      bedroom2: {
+        category: "Habitaciones",
+        title: "Segunda habitación con balcón",
+      },
+
+      masterBath: {
+        category: "Baños",
+        title: "Baño principal con bañera y doble lavamanos",
+      },
+
+      bath2: {
+        category: "Baños",
+        title: "Segundo baño con ducha en vidrio",
+      },
+
+      laundry: {
+        category: "Servicios",
+        title: "Zona de ropas independiente",
+      },
+    },
+  },
+
+  views: {
+    label: "Vistas y exteriores",
+
+    title: "Tres balcones y la ciudad de fondo",
+
+    description:
+      "Al ser el tercer y último piso, la residencia abre a la ciudad y a las montañas sin edificios al frente. Tres balcones privados extienden la vida hacia el exterior.",
+
+    images: {
       balcony: {
         category: "Exterior",
         title: "Balcón principal",
       },
 
-      mainRoom: {
-        category: "Suite principal",
-        title: "Habitación principal",
+      viewCity: {
+        category: "Vistas",
+        title: "Vista hacia la ciudad y las montañas",
       },
 
-      homeOffice: {
-        category: "Estudio",
-        title: "Estudio doble",
+      viewStreet: {
+        category: "Vistas",
+        title: "Entorno arbolado desde la residencia",
+      },
+    },
+  },
+
+  parking: {
+    label: "Parqueadero",
+
+    title: "Parqueadero privado con cargador para vehículo eléctrico",
+
+    description:
+      "Un parqueadero amplio y cubierto, con estación de carga eléctrica ya instalada y medidor independiente. Muy pocos apartamentos remodelados en la zona lo ofrecen listo para usar.",
+
+    items: {
+      private: "Parqueadero privado y cubierto",
+      ev: "Cargador para vehículo eléctrico instalado",
+      meter: "Medidor independiente de energía",
+      visitors: "Acceso directo desde el sótano",
+    },
+
+    images: {
+      parking: {
+        category: "Parqueadero",
+        title: "Parqueadero privado cubierto",
       },
 
-      wc3: {
-        category: "Baños",
-        title: "Baño social",
+      evCharger: {
+        category: "Parqueadero",
+        title: "Estación de carga eléctrica",
+      },
+    },
+  },
+
+  building: {
+    label: "El edificio",
+
+    title: "Un edificio tradicional en un sector consolidado",
+
+    description:
+      "Arquitectura en ladrillo y teja, entrada con antejardín y zonas comunes tranquilas. Un edificio de baja densidad, rodeado de árboles, a pasos del Cerro Nutibara.",
+
+    images: {
+      facade: {
+        category: "Edificio",
+        title: "Fachada y acceso principal",
+      },
+
+      facadeEntry: {
+        category: "Edificio",
+        title: "Portería cubierta",
+      },
+
+      commonTerrace: {
+        category: "Zonas comunes",
+        title: "Terraza común en ladrillo",
       },
     },
   },
@@ -119,18 +217,17 @@ const es = {
 
     interior: {
       dishwasher: "Lavavajillas empotrado",
-      kitchen: "Cocina contemporánea",
-      pantry: "Alacena",
-      laundry: "Zona de ropas",
-      airConditioning:
-        "Sistema dual de aire acondicionado de 24.000 BTU",
+      kitchen: "Cocina contemporánea con isla",
+      pantry: "Alacena de despensa",
+      laundry: "Zona de ropas independiente",
+      airConditioning: "Sistema dual de aire acondicionado de 24.000 BTU",
     },
 
     features: {
-      location: "Ubicación Premium",
-      light: "Iluminación natural",
-      neighborhood: "Sector residencial tranquilo",
-      premiumFinishes: "Acabados de lujo",
+      location: "Ubicación premium junto al Cerro Nutibara",
+      light: "Iluminación natural todo el día",
+      neighborhood: "Sector residencial tranquilo y arborizado",
+      premiumFinishes: "Acabados de lujo e iluminación de diseño",
     },
   },
 
@@ -145,7 +242,7 @@ const es = {
     architecture: {
       title: "Arquitectura de doble altura",
       description:
-        "Aproximadamente 4 metros de altura crean una extraordinaria sensación de amplitud, luminosidad y sofisticación.",
+        "Aproximadamente 4 metros de altura en el tercer y último piso crean una extraordinaria sensación de amplitud y luminosidad.",
     },
 
     balconies: {
@@ -185,11 +282,13 @@ const es = {
     title: "Conectado con toda la ciudad, rodeado de naturaleza",
 
     description:
-      "Ubicada en el Cerro Nutibara, esta residencia ofrece acceso rápido al distrito financiero, la oferta gastronómica, zonas de entretenimiento y espacios verdes de Medellín.",
+      "Ubicada junto al Cerro Nutibara, esta residencia ofrece acceso rápido al distrito financiero, la oferta gastronómica, zonas de entretenimiento y espacios verdes de Medellín.",
 
     walking: "A pocos pasos",
 
     mapLabel: "Ubicación privilegiada",
+
+    mapTitle: "Mapa del sector Cerro Nutibara, Medellín",
 
     mapDescription:
       "Una ubicación estratégica entre el centro administrativo, El Poblado y los principales corredores de la ciudad.",
@@ -213,40 +312,19 @@ const es = {
 
     responseTime: "Respuesta estimada en menos de 1 hora",
 
-    schedule: "Agendar Visita Privada",
+    priceLabel: "Precio",
+    priceValue: "Bajo consulta",
+    priceNote: "Escríbanos y le compartimos el valor y las condiciones de negociación.",
 
-    brochure: "Brochure de la Propiedad (Próximamente)",
+    schedule: "Agendar visita por WhatsApp",
+    call: "Llamar ahora",
+    brochure: "Descargar brochure (PDF)",
   },
 
-  highlights: {
-    label: "La Residencia",
-
-    title: "Espacios diseñados alrededor de tu forma de vivir",
-
-    description:
-      "Una residencia cuidadosamente remodelada donde la amplitud, la privacidad y una ubicación privilegiada se encuentran.",
-
-    area: {
-      title: "144 m²",
-      description: "Amplia área privada",
-    },
-
-    rooms: {
-      title: "3 · 3",
-      description: "Habitaciones · Baños",
-    },
-
-    ceiling: {
-      value: "≈ 4 m",
-      title: "Doble altura",
-      description:
-        "Una extraordinaria sensación de amplitud, luminosidad y sofisticación.",
-    },
-
-    balconies: {
-      title: "3 Balcones",
-      description: "Espacios exteriores privados",
-    },
+  footer: {
+    contactWhatsapp: "Escribir por WhatsApp",
+    contactPhone: "Llamar",
+    rights: "Todos los derechos reservados.",
   },
 };
 

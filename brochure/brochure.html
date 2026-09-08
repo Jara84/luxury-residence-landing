@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>El Cerro Boutique Residence</title>
+<style>
+  @page { size: A4 portrait; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    /* Paleta neutra fría (zinc): gris moderno y sobrio, sin el matiz cálido
+       de la paleta stone, que en pantalla e impresión tiraba a beige rosado. */
+    --ink: #18181b;
+    --ink-soft: #52525b;
+    --ink-mute: #a1a1aa;
+    --line: #e4e4e7;
+    --paper: #ffffff;
+    --mist: #f4f4f5;
+  }
+  body {
+    font-family: "DejaVu Sans", system-ui, sans-serif;
+    color: var(--ink);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    width: 210mm; height: 297mm;
+    position: relative; overflow: hidden;
+    page-break-after: always; background: var(--paper);
+  }
+  .page:last-child { page-break-after: auto; }
+  .pad { padding: 18mm 16mm; height: 100%; display: flex; flex-direction: column; }
+
+  .eyebrow { font-size: 7.5pt; letter-spacing: .34em; text-transform: uppercase; color: var(--ink-mute); }
+  h1 { font-size: 34pt; font-weight: 700; letter-spacing: -.01em; line-height: 1.05; }
+  h2 { font-size: 20pt; font-weight: 700; letter-spacing: -.01em; line-height: 1.15; }
+  h3 { font-size: 10.5pt; font-weight: 700; }
+  p  { font-size: 9.5pt; line-height: 1.65; color: var(--ink-soft); }
+  .lead { font-size: 11pt; line-height: 1.6; color: var(--ink-soft); }
+
+  /* ---------- Portada ---------- */
+  .cover { position: relative; color: #fff; }
+  .cover img.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .cover .veil { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.30) 45%, rgba(0,0,0,.78) 100%); }
+  .cover .inner { position: relative; height: 100%; padding: 20mm 16mm; display: flex; flex-direction: column; justify-content: space-between; }
+  .mark { font-size: 11pt; font-weight: 700; letter-spacing: .22em; }
+  .mark small { display: block; font-size: 7pt; font-weight: 400; letter-spacing: .3em; opacity: .85; margin-top: 2mm; }
+  .cover h1 { color: #fff; }
+  .cover p { color: rgba(255,255,255,.86); font-size: 11pt; }
+  .cover .rule { width: 26mm; height: 2px; background: rgba(255,255,255,.6); margin: 7mm 0; }
+  .cover .facts { display: flex; gap: 12mm; margin-top: 9mm; }
+  .cover .facts div span { display: block; font-size: 17pt; font-weight: 700; }
+  .cover .facts div small { font-size: 7.5pt; letter-spacing: .2em; text-transform: uppercase; opacity: .8; }
+
+  /* ---------- Bloques ---------- */
+  .head { border-bottom: 1px solid var(--line); padding-bottom: 6mm; margin-bottom: 8mm; }
+  .head h2 { margin-top: 3mm; }
+  .head p { margin-top: 4mm; max-width: 150mm; }
+
+  .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 5mm; margin-bottom: 8mm; }
+  .stat { border: 1px solid var(--line); border-radius: 4mm; padding: 6mm; background: var(--mist); }
+  .stat b { letter-spacing: -.01em; }
+  .stat b { display: block; font-size: 16pt; }
+  .stat small { display: block; font-size: 8pt; color: var(--ink-soft); margin-top: 1.5mm; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+  .grid3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 4mm; }
+  figure { position: relative; border-radius: 3mm; overflow: hidden; background: #eee; }
+  figure img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  figcaption {
+    position: absolute; inset: auto 0 0 0; padding: 12mm 4mm 3.5mm;
+    background: linear-gradient(0deg, rgba(0,0,0,.72), rgba(0,0,0,0));
+    color: #fff; font-size: 7.5pt; letter-spacing: .04em;
+  }
+  .h70 { height: 70mm; } .h85 { height: 85mm; } .h95 { height: 95mm; } .h50 { height: 50mm; }
+  .full { grid-column: 1 / -1; }
+
+  ul.checks { list-style: none; margin-top: 5mm; }
+  ul.checks li { font-size: 9.5pt; color: var(--ink-soft); padding: 2.6mm 0 2.6mm 7mm; position: relative; border-bottom: 1px solid var(--line); }
+  ul.checks li:before { content: ""; position: absolute; left: 0; top: 4.6mm; width: 3mm; height: 3mm; border-radius: 50%; background: var(--ink); }
+  ul.checks li b { color: var(--ink); font-weight: 700; }
+
+  .dist { list-style: none; }
+  .dist li { display: flex; justify-content: space-between; align-items: baseline;
+             font-size: 10pt; padding: 3.4mm 0; border-bottom: 1px solid var(--line); }
+  .dist li span:last-child { font-weight: 700; }
+
+  .foot { margin-top: auto; padding-top: 6mm; border-top: 1px solid var(--line);
+          display: flex; justify-content: space-between; font-size: 7.5pt; color: var(--ink-mute); letter-spacing: .1em; }
+
+  /* ---------- Contacto ---------- */
+  .contact { background: var(--ink); color: #fff; }
+  .contact .pad { justify-content: center; }
+  .contact h2 { color: #fff; font-size: 24pt; }
+  .contact p { color: rgba(255,255,255,.7); }
+  .cbox { margin-top: 9mm; border: 1px solid rgba(255,255,255,.22); border-radius: 4mm; padding: 8mm; }
+  .cbox .row { display: flex; justify-content: space-between; align-items: baseline; padding: 4mm 0; border-bottom: 1px solid rgba(255,255,255,.14); }
+  .cbox .row:last-child { border-bottom: 0; }
+  .cbox .row small { font-size: 7.5pt; letter-spacing: .26em; text-transform: uppercase; color: rgba(255,255,255,.5); }
+  .cbox .row b { font-size: 13pt; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- 1. PORTADA -->
+<section class="page cover">
+  <img class="bg" src="../public/img/hero-1600.jpg" alt="">
+  <div class="veil"></div>
+  <div class="inner">
+    <div class="mark">EL CERRO<small>BOUTIQUE RESIDENCE</small></div>
+    <div>
+      <p class="eyebrow" style="color:rgba(255,255,255,.75)">Residencia boutique privada · Medellín</p>
+      <div class="rule"></div>
+      <h1>El Cerro<br>Boutique Residence</h1>
+      <p style="margin-top:6mm;max-width:130mm">144 m² completamente remodelados en el tercer y último piso,
+         junto al Cerro Nutibara.</p>
+      <div class="facts">
+        <div><span>144 m²</span><small>Área privada</small></div>
+        <div><span>3 · 3</span><small>Hab. · Baños</small></div>
+        <div><span>≈ 4 m</span><small>Doble altura</small></div>
+        <div><span>3</span><small>Balcones</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. LA RESIDENCIA -->
+<section class="page"><div class="pad">
+  <div class="head">
+    <p class="eyebrow">La residencia</p>
+    <h2>Una residencia privada para vivir Medellín de otra manera</h2>
+    <p>Una residencia de 144 m² completamente remodelada, donde la amplitud, los acabados de lujo
+       y la iluminación natural crean una extraordinaria sensación de confort y privacidad.
+       Al estar en el tercer y último piso, no hay vecinos arriba ni edificios al frente.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>144 m²</b><small>Área privada con proporciones excepcionales</small></div>
+    <div class="stat"><b>3 · 3</b><small>Habitaciones y baños, más vestier y estudio doble</small></div>
+    <div class="stat"><b>≈ 4 m</b><small>Doble altura en el área social</small></div>
+  </div>
+
+  <div class="grid2">
+    <figure class="full h95"><img src="../public/img/social-open-1600.jpg" alt="">
+      <figcaption>Cocina, comedor y sala en un solo espacio</figcaption></figure>
+    <figure class="h70"><img src="../public/img/living-1600.jpg" alt="">
+      <figcaption>Sala principal con salida al balcón</figcaption></figure>
+    <figure class="h70"><img src="../public/img/kitchen-island-1600.jpg" alt="">
+      <figcaption>Isla central con cubierta en cuarzo</figcaption></figure>
+  </div>
+
+  <div class="foot"><span>EL CERRO BOUTIQUE RESIDENCE</span><span>02</span></div>
+</div></section>
+
+<!-- 3. COCINA Y ESPACIOS -->
+<section class="page"><div class="pad">
+  <div class="head">
+    <p class="eyebrow">Interiores</p>
+    <h2>Cocina contemporánea y espacios de servicio</h2>
+    <p>Cocina integral con isla, cubierta en cuarzo, lavavajillas empotrado, alacena de despensa
+       y zona de ropas independiente. Todo remodelado con materiales premium e iluminación de diseño.</p>
+  </div>
+
+  <div class="grid2">
+    <figure class="h85"><img src="../public/img/kitchen-1600.jpg" alt="">
+      <figcaption>Cocina contemporánea integral</figcaption></figure>
+    <figure class="h85"><img src="../public/img/kitchen-bar-1600.jpg" alt="">
+      <figcaption>Barra, vinoteca y lavavajillas empotrado</figcaption></figure>
+    <figure class="h85"><img src="../public/img/pantry-1600.jpg" alt="">
+      <figcaption>Alacena de despensa</figcaption></figure>
+    <figure class="h85"><img src="../public/img/laundry-1600.jpg" alt="">
+      <figcaption>Zona de ropas independiente</figcaption></figure>
+  </div>
+
+  <div class="foot"><span>EL CERRO BOUTIQUE RESIDENCE</span><span>03</span></div>
+</div></section>
+
+<!-- 4. HABITACIONES Y BAÑOS -->
+<section class="page"><div class="pad">
+  <div class="head">
+    <p class="eyebrow">Habitaciones y baños</p>
+    <h2>Suite principal con vestier y dos baños remodelados</h2>
+    <p>Carpintería a medida, vestier amplio, baño principal con bañera y doble lavamanos,
+       y un segundo baño con ducha en vidrio. Aire acondicionado dual de 24.000 BTU.</p>
+  </div>
+
+  <div class="grid2">
+    <figure class="h85"><img src="../public/img/master-bedroom-1600.jpg" alt="">
+      <figcaption>Habitación principal con carpintería a medida</figcaption></figure>
+    <figure class="h85"><img src="../public/img/master-closet-1600.jpg" alt="">
+      <figcaption>Acceso al vestier</figcaption></figure>
+    <figure class="h85"><img src="../public/img/master-bath-1600.jpg" alt="">
+      <figcaption>Baño principal con bañera y doble lavamanos</figcaption></figure>
+    <figure class="h85"><img src="../public/img/bath-2-1600.jpg" alt="">
+      <figcaption>Segundo baño con ducha en vidrio</figcaption></figure>
+  </div>
+
+  <div class="foot"><span>EL CERRO BOUTIQUE RESIDENCE</span><span>04</span></div>
+</div></section>
+
+<!-- 5. VISTAS Y PARQUEADERO -->
+<section class="page"><div class="pad">
+  <div class="head">
+    <p class="eyebrow">Vistas, exteriores y parqueadero</p>
+    <h2>Tres balcones, la ciudad de fondo y cargador eléctrico</h2>
+    <p>El tercer y último piso abre a la ciudad y a las montañas sin edificios al frente.
+       El parqueadero privado y cubierto ya cuenta con estación de carga para vehículo eléctrico
+       y medidor independiente.</p>
+  </div>
+
+  <div class="grid3">
+    <figure class="h70"><img src="../public/img/balcony-1600.jpg" alt=""><figcaption>Balcón principal</figcaption></figure>
+    <figure class="h70"><img src="../public/img/view-city-1600.jpg" alt=""><figcaption>Vista a la ciudad</figcaption></figure>
+    <figure class="h70"><img src="../public/img/parking-1600.jpg" alt=""><figcaption>Parqueadero privado</figcaption></figure>
+  </div>
+
+  <ul class="checks">
+    <li><b>Cargador para vehículo eléctrico</b> instalado y con medidor independiente</li>
+    <li><b>Tres balcones privados:</b> uno principal y dos auxiliares</li>
+    <li><b>Climatización dual:</b> dos equipos de aire acondicionado de 24.000 BTU</li>
+    <li><b>Edificio tradicional</b> en ladrillo y teja, de baja densidad, rodeado de árboles</li>
+  </ul>
+
+  <div class="foot"><span>EL CERRO BOUTIQUE RESIDENCE</span><span>05</span></div>
+</div></section>
+
+<!-- 6. UBICACIÓN -->
+<section class="page"><div class="pad">
+  <div class="head">
+    <p class="eyebrow">La ubicación</p>
+    <h2>Conectado con toda la ciudad, rodeado de naturaleza</h2>
+    <p>Junto al Cerro Nutibara, con acceso rápido al centro administrativo, El Poblado
+       y los principales corredores de Medellín.</p>
+  </div>
+
+  <ul class="dist">
+    <li><span>Parque Cerro Nutibara</span><span>A pocos pasos</span></li>
+    <li><span>La Alpujarra · centro administrativo</span><span>8 min</span></li>
+    <li><span>Provenza</span><span>10 min</span></li>
+    <li><span>Milla de Oro</span><span>10 min</span></li>
+    <li><span>Aeropuerto José María Córdova</span><span>30 min</span></li>
+  </ul>
+
+  <div class="grid2" style="margin-top:8mm">
+    <figure class="h70"><img src="../public/img/facade-1600.jpg" alt=""><figcaption>Fachada y acceso principal</figcaption></figure>
+    <figure class="h70"><img src="../public/img/common-terrace-1600.jpg" alt=""><figcaption>Terraza común en ladrillo</figcaption></figure>
+  </div>
+
+  <div class="foot"><span>EL CERRO BOUTIQUE RESIDENCE</span><span>06</span></div>
+</div></section>
+
+<!-- 7. CONTACTO -->
+<section class="page contact"><div class="pad">
+  <p class="eyebrow" style="color:rgba(255,255,255,.55)">Visita privada</p>
+  <h2 style="margin-top:5mm">Descubra El Cerro Boutique Residence en persona</h2>
+  <p style="margin-top:6mm;max-width:140mm">Agende una visita y conozca de primera mano la arquitectura,
+     los acabados y el estilo de vida que hacen única esta residencia.
+     Respuesta estimada en menos de 1 hora.</p>
+
+  <div class="cbox">
+    <div class="row"><small>Precio</small><b>Bajo consulta</b></div>
+    <div class="row"><small>WhatsApp</small><b>+57 300 227 6016</b></div>
+    <div class="row"><small>Teléfono</small><b>+57 300 227 6016</b></div>
+    <div class="row"><small>Sitio web</small><b>elcerroresidence.com</b></div>
+    <div class="row"><small>Ubicación</small><b>Cerro Nutibara · Medellín · Colombia</b></div>
+  </div>
+
+  <p style="margin-top:10mm;font-size:8pt;color:rgba(255,255,255,.45)">
+    Documento informativo. Las áreas, medidas y características son aproximadas y no constituyen
+    oferta comercial vinculante. Fotografías del inmueble en su estado actual.
+  </p>
+</div></section>
+
+</body>
+</html>

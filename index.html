@@ -1,112 +1,110 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-
-    <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Primary SEO -->
-    <title>El Cerro Boutique Residence | Luxury Apartment in Medellín</title>
+    <!-- SEO principal -->
+    <title>El Cerro Boutique Residence | Apartamento de lujo en Medellín</title>
 
     <meta
       name="description"
-      content="Discover El Cerro Boutique Residence, a fully renovated luxury apartment in Medellín with premium finishes, panoramic city views and an exceptional location next to Cerro Nutibara."
+      content="Apartamento de lujo de 144 m² totalmente remodelado en Medellín, junto al Cerro Nutibara: 3 habitaciones, 3 baños, tres balcones, doble altura, parqueadero privado con cargador eléctrico. Agende una visita privada."
     />
 
-    <meta
-      name="keywords"
-      content="Luxury apartment Medellín, Boutique Residence Medellín, El Cerro Residence, Luxury Real Estate Colombia, Apartment for Sale Medellín"
-    />
-
-    <meta name="author" content="Daniel Jaramillo" />
-
-    <meta
-      name="robots"
-      content="index, follow, max-image-preview:large"
-    />
-
-    <!-- Theme -->
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#1c1917" />
 
-    <!-- Canonical -->
+    <link rel="canonical" href="https://elcerroresidence.com/" />
+
+    <!-- Carga anticipada de la imagen principal: mejora el LCP -->
     <link
-      rel="canonical"
-      href="https://elcerroresidence.com"
+      rel="preload"
+      as="image"
+      href="/img/hero-1600.webp"
+      imagesrcset="/img/hero-800.webp 800w, /img/hero-1600.webp 1600w"
+      imagesizes="100vw"
+      fetchpriority="high"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Open Graph -->
-    <meta
-      property="og:type"
-      content="website"
-    />
-
-    <meta
-      property="og:title"
-      content="El Cerro Boutique Residence"
-    />
-
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="El Cerro Boutique Residence" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:title" content="El Cerro Boutique Residence | Apartamento de lujo en Medellín" />
     <meta
       property="og:description"
-      content="Luxury apartment in Medellín with premium finishes, three balconies and panoramic views."
+      content="144 m² remodelados junto al Cerro Nutibara: 3 habitaciones, tres balcones, doble altura y parqueadero con cargador eléctrico."
     />
+    <meta property="og:url" content="https://elcerroresidence.com/" />
+    <meta property="og:image" content="https://elcerroresidence.com/og-cover.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sala principal de El Cerro Boutique Residence" />
 
-    <meta
-      property="og:image"
-      content="/og-cover.jpg"
-    />
-
-    <meta
-      property="og:url"
-      content="https://elcerroresidence.com"
-    />
-
-    <meta
-      property="og:site_name"
-      content="El Cerro Boutique Residence"
-    />
-
-    <!-- Twitter -->
-    <meta
-      name="twitter:card"
-      content="summary_large_image"
-    />
-
-    <meta
-      name="twitter:title"
-      content="El Cerro Boutique Residence"
-    />
-
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="El Cerro Boutique Residence" />
     <meta
       name="twitter:description"
-      content="Luxury apartment in Medellín with premium finishes and exceptional design."
+      content="Apartamento de lujo de 144 m² en Medellín, junto al Cerro Nutibara."
     />
+    <meta name="twitter:image" content="https://elcerroresidence.com/og-cover.jpg" />
 
-    <meta
-      name="twitter:image"
-      content="/og-cover.jpg"
-    />
-
-    <!-- Icons -->
+    <!-- Iconos -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-    <link
-      rel="apple-touch-icon"
-      href="/apple-touch-icon.png"
-    />
-
-    <link
-      rel="manifest"
-      href="/site.webmanifest"
-    />
+    <!-- Datos estructurados: permite a Google mostrar la ficha del inmueble -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SingleFamilyResidence",
+        "name": "El Cerro Boutique Residence",
+        "description": "Apartamento de lujo de 144 m² totalmente remodelado en el tercer y último piso, junto al Cerro Nutibara, Medellín. Tres habitaciones, tres baños, vestier, tres balcones, doble altura, aire acondicionado dual y parqueadero privado con cargador para vehículo eléctrico.",
+        "url": "https://elcerroresidence.com/",
+        "image": [
+          "https://elcerroresidence.com/img/hero-1600.jpg",
+          "https://elcerroresidence.com/img/social-open-1600.jpg",
+          "https://elcerroresidence.com/img/kitchen-island-1600.jpg",
+          "https://elcerroresidence.com/img/master-bath-1600.jpg"
+        ],
+        "numberOfRooms": 3,
+        "numberOfBedrooms": 3,
+        "numberOfBathroomsTotal": 3,
+        "floorLevel": "3",
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": 144,
+          "unitCode": "MTK"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Medellín",
+          "addressRegion": "Antioquia",
+          "addressCountry": "CO"
+        },
+        "amenityFeature": [
+          { "@type": "LocationFeatureSpecification", "name": "Vestier", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Tres balcones privados", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Aire acondicionado dual 24.000 BTU", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Lavavajillas empotrado", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Zona de ropas independiente", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Alacena de despensa", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Parqueadero privado cubierto", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Cargador para vehículo eléctrico", "value": true }
+        ]
+      }
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
-
-    <script
-      type="module"
-      src="/src/main.tsx"
-    ></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

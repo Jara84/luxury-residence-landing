@@ -1,75 +1,72 @@
-# React + TypeScript + Vite
+# El Cerro Boutique Residence — landing de venta
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio de una sola página para la venta del apartamento **El Cerro Boutique Residence**
+(Cerro Nutibara, Medellín). Publicado en <https://elcerroresidence.com>.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19 + TypeScript, empaquetado con Vite
+- Tailwind CSS 4
+- i18next (español por defecto, inglés disponible)
+- Despliegue automático a S3 + CloudFront con GitHub Actions
 
-## React Compiler
+## Desarrollo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # type-check + build de producción en dist/
+npm run preview  # sirve el build local
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Imágenes
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Las fotos optimizadas viven en `public/img/` y se sirven por ruta directa
+(no pasan por el bundler). Cada foto existe en tres archivos:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Archivo | Uso |
+|---|---|
+| `<nombre>-800.webp`  | móviles |
+| `<nombre>-1600.webp` | escritorio y pantallas retina |
+| `<nombre>-1600.jpg`  | respaldo para navegadores sin WebP |
 
-```
+Para añadir una foto: exportarla a esos tres tamaños con el mismo prefijo,
+dejarla en `public/img/` y referenciarla por su nombre base con el componente
+`<Picture name="mi-foto" ... />`. **No** subir originales de cámara al repo:
+un JPG de 4032 px pesa ~2,5 MB y hunde el tiempo de carga.
+
+## Analítica
+
+La página envía eventos a Google Analytics 4 solo si existe la variable
+`VITE_GA_ID` en tiempo de build.
+
+- Local: copiar `.env.example` a `.env.local` y poner el ID.
+- Producción: crear la variable `VITE_GA_ID` en
+  *GitHub → Settings → Secrets and variables → Actions → Variables*.
+
+Eventos personalizados definidos en `src/lib/analytics.ts`:
+
+| Evento | Cuándo se dispara |
+|---|---|
+| `contact_whatsapp` | clic en cualquier botón de WhatsApp (incluye de qué sección salió) |
+| `contact_call`     | clic en el botón de llamar |
+| `download_brochure`| descarga del PDF |
+| `view_gallery_image` | apertura de una foto en la galería |
+
+## Contacto
+
+Teléfono, WhatsApp y textos de los mensajes están centralizados en
+`src/lib/contact.ts`. Cambiarlos ahí los cambia en toda la página.
+
+## Textos
+
+Todo el copy está en `src/i18n/es.ts` y `src/i18n/en.ts`.
+**Los dos archivos deben tener exactamente las mismas claves**: si una clave
+existe solo en uno de ellos, la página muestra el nombre técnico de la clave
+en pantalla en lugar del texto.
+
+## Despliegue
+
+Cada push a la rama `feature/internationalization` construye el sitio y lo
+sincroniza con el bucket de S3, invalidando la caché de CloudFront.
+Ver `.github/workflows/deploy.yml`.

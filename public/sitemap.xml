@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://elcerroresidence.com/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://elcerroresidence.com/img/hero-1600.jpg</image:loc>
+      <image:title>El Cerro Boutique Residence - sala principal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://elcerroresidence.com/img/kitchen-island-1600.jpg</image:loc>
+      <image:title>Cocina con isla central</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://elcerroresidence.com/img/master-bath-1600.jpg</image:loc>
+      <image:title>Bano principal con banera y doble lavamanos</image:title>
+    </image:image>
   </url>
 </urlset>

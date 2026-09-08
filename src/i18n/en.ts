@@ -1,104 +1,204 @@
 const en = {
   header: {
-    brand: "El Cerro Residence",
+    brand: "El Cerro Boutique Residence",
     residence: "Residence",
     gallery: "Gallery",
+    views: "Views",
     location: "Location",
-    visit: "Schedule a visit",
+    visit: "Book a viewing",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
   },
 
   hero: {
     location: "PRIVATE BOUTIQUE RESIDENCE",
     title: "El Cerro Boutique Residence",
-    subtitle: "A Private Luxury Residence in Medellín",
+    subtitle: "A private luxury residence in Medellín",
     description:
-      "A fully renovated 144 m² residence where contemporary design, natural light and refined finishes come together in one of Medellín's most distinctive locations.",
-    button: "Schedule a Private Viewing",
+      "144 m² fully renovated on the third and top floor, where contemporary design, natural light and luxury finishes meet in one of Medellín's most distinctive locations.",
+    button: "Book a private viewing",
+    alt: "Main living room opening onto the balcony with city views",
   },
 
   introduction: {
     label: "Private Boutique Residence",
 
-    title:
-      "A private residence designed to experience Medellín differently",
+    title: "A private residence for a different way of living in Medellín",
 
     description:
-      "A fully renovated 144 m² residence where generous proportions, refined finishes and natural light create an exceptional sense of comfort and privacy.",
+      "A fully renovated 144 m² residence where space, luxury finishes and natural light create an extraordinary sense of comfort and privacy.",
 
     cards: {
       area: {
         value: "144 m²",
-        title: "Generous Private Area",
+        title: "Private area",
         description:
-          "Thoughtfully designed spaces with premium finishes and exceptional proportions.",
+          "Carefully designed spaces with luxury finishes and exceptional proportions.",
       },
 
       rooms: {
-        value: "3",
-        title: "3 Bathrooms · Walk-in Closet",
+        value: "3 · 3",
+        title: "Bedrooms · Bathrooms",
         description:
-          "A refined residential layout designed for comfort, privacy and everyday living.",
+          "Master suite with walk-in closet and bathtub, plus two bedrooms and a double workstation.",
       },
 
       ceiling: {
-        value: "4 m",
-        title: "Double-Height Space",
+        value: "≈ 4 m",
+        title: "Double height",
         description:
-          "An extraordinary sense of space, natural light and sophistication.",
+          "Third and top floor: height, light and privacy you will not find on a middle floor.",
       },
     },
   },
 
   gallery: {
-    label: "The Residence",
-    title: "Every Space, Thoughtfully Designed",
+    label: "Gallery",
+
+    title: "Every space, carefully designed",
+
     description:
-      "Explore the spaces that define this residence: generous proportions, natural light, refined finishes and a privileged connection to Medellín.",
+      "Discover the spaces that define this residence: openness, natural light, luxury finishes and a privileged connection to Medellín.",
 
     images: {
-      hero: {
+      socialOpen: {
         category: "Social Area",
-        title: "Open Social Area",
+        title: "Kitchen, dining and living in one space",
       },
 
-      livingRoom: {
+      living: {
         category: "Social Area",
-        title: "Living Room",
+        title: "Main living room opening to the balcony",
       },
 
-      livingRoom2: {
-        category: "Social Area",
-        title: "Living Room Detail",
+      kitchenIsland: {
+        category: "Kitchen",
+        title: "Central island with quartz countertop",
       },
 
       kitchen: {
         category: "Kitchen",
-        title: "Contemporary Kitchen",
+        title: "Full contemporary kitchen",
       },
 
-      kitchen2: {
+      kitchenBar: {
         category: "Kitchen",
-        title: "Kitchen Island",
+        title: "Bar, wine storage and built-in dishwasher",
       },
 
+      pantry: {
+        category: "Kitchen",
+        title: "Walk-in pantry",
+      },
+
+      masterBedroom: {
+        category: "Master Suite",
+        title: "Master bedroom with custom joinery",
+      },
+
+      masterCloset: {
+        category: "Master Suite",
+        title: "Walk-in closet access",
+      },
+
+      bedroom2: {
+        category: "Bedrooms",
+        title: "Second bedroom with balcony",
+      },
+
+      masterBath: {
+        category: "Bathrooms",
+        title: "Master bath with tub and double vanity",
+      },
+
+      bath2: {
+        category: "Bathrooms",
+        title: "Second bathroom with glass shower",
+      },
+
+      laundry: {
+        category: "Services",
+        title: "Separate laundry room",
+      },
+    },
+  },
+
+  views: {
+    label: "Views & outdoors",
+
+    title: "Three balconies and the city beyond",
+
+    description:
+      "On the third and top floor, the residence opens to the city and the mountains with no buildings in front. Three private balconies extend living outdoors.",
+
+    images: {
       balcony: {
         category: "Outdoor",
-        title: "Main Balcony",
+        title: "Main balcony",
       },
 
-      mainRoom: {
-        category: "Master Suite",
-        title: "Master Bedroom",
+      viewCity: {
+        category: "Views",
+        title: "City and mountain views",
       },
 
-      homeOffice: {
-        category: "Study",
-        title: "Double Home Office",
+      viewStreet: {
+        category: "Views",
+        title: "Tree-lined surroundings",
+      },
+    },
+  },
+
+  parking: {
+    label: "Parking",
+
+    title: "Private parking with EV charging station",
+
+    description:
+      "A large covered private parking space with an EV charging station already installed and its own electricity meter. Very few renovated apartments in the area offer this ready to use.",
+
+    items: {
+      private: "Private covered parking space",
+      ev: "EV charging station installed",
+      meter: "Independent electricity meter",
+      visitors: "Direct access from the garage level",
+    },
+
+    images: {
+      parking: {
+        category: "Parking",
+        title: "Private covered parking",
       },
 
-      wc3: {
-        category: "Bathrooms",
-        title: "Guest Bathroom",
+      evCharger: {
+        category: "Parking",
+        title: "EV charging station",
+      },
+    },
+  },
+
+  building: {
+    label: "The building",
+
+    title: "A traditional building in an established neighbourhood",
+
+    description:
+      "Brick and clay-tile architecture, a landscaped entrance and quiet common areas. A low-density building surrounded by trees, steps from Cerro Nutibara.",
+
+    images: {
+      facade: {
+        category: "Building",
+        title: "Façade and main entrance",
+      },
+
+      facadeEntry: {
+        category: "Building",
+        title: "Covered entrance",
+      },
+
+      commonTerrace: {
+        category: "Common areas",
+        title: "Brick common terrace",
       },
     },
   },
@@ -106,90 +206,92 @@ const en = {
   lifestyle: {
     label: "Lifestyle",
 
-    title: "Designed for Modern Living",
+    title: "Designed for modern living",
 
     description:
-      "Every detail of this residence has been carefully renovated to deliver comfort, elegance and functionality.",
+      "Every detail of this residence has been carefully renovated to offer comfort, elegance and functionality.",
 
-    interiorTitle: "Interior Features",
+    interiorTitle: "Interior features",
 
     lifestyleTitle: "Lifestyle",
 
     interior: {
-      dishwasher: "Built-in Dishwasher",
-      kitchen: "Contemporary Kitchen",
-      pantry: "Pantry",
-      laundry: "Laundry Room",
-      airConditioning: "Dual 24,000 BTU Air Conditioning System",
+      dishwasher: "Built-in dishwasher",
+      kitchen: "Contemporary kitchen with island",
+      pantry: "Walk-in pantry",
+      laundry: "Separate laundry room",
+      airConditioning: "Dual 24,000 BTU air conditioning system",
     },
 
     features: {
-      location: "Prime Location",
-      light: "Natural Light",
-      neighborhood: "Quiet Residential Area",
-      premiumFinishes: "Luxury Finishes",
+      location: "Premium location next to Cerro Nutibara",
+      light: "Natural light all day long",
+      neighborhood: "Quiet, tree-lined residential area",
+      premiumFinishes: "Luxury finishes and designer lighting",
     },
   },
 
   signature: {
     label: "Signature Features",
 
-    title: "A Residence Designed Around Everyday Luxury",
+    title: "A residence designed around everyday luxury",
 
     description:
-      "Every major renovation was carefully planned to create a residence that combines architecture, comfort, technology and timeless elegance.",
+      "Every design decision was carefully considered to combine architecture, comfort, technology and timeless elegance.",
 
     architecture: {
-      title: "Double-Height Architecture",
+      title: "Double-height architecture",
       description:
-        "Approximately 4-meter ceilings create a remarkable sense of space, openness and natural light.",
+        "Approximately 4-metre ceilings on the third and top floor create an exceptional sense of openness and light.",
     },
 
     balconies: {
-      title: "Three Private Balconies",
+      title: "Three private balconies",
       description:
-        "One main balcony plus two additional balconies seamlessly connect indoor and outdoor living.",
+        "One main balcony and two additional balconies extend the living experience outdoors.",
     },
 
     masterSuite: {
-      title: "Luxury Master Suite",
+      title: "Luxury master suite",
       description:
-        "Walk-in closet, bathtub, double vanity and premium finishes designed for comfort.",
+        "Walk-in closet, bathtub, double vanity and premium finishes designed for maximum comfort.",
     },
 
     smartLiving: {
-      title: "Smart Living",
+      title: "Integrated technology",
       description:
-        "Built-in dishwasher, integrated charging stations, dedicated double workstation and custom storage solutions throughout the residence.",
+        "Built-in dishwasher, integrated charging stations, double workstation and smart storage solutions.",
     },
 
     climate: {
-      title: "Dual Climate Control",
+      title: "Dual climate control",
       description:
-        "Two 24,000 BTU air conditioning systems provide exceptional comfort year-round.",
+        "Two 24,000 BTU air conditioning systems ensure comfort all year round.",
     },
 
     renovation: {
-      title: "Complete Luxury Renovation",
+      title: "Complete luxury renovation",
       description:
-        "Premium materials, custom lighting and contemporary design transform every space.",
+        "Premium materials, custom lighting and contemporary design transform every space in the residence.",
     },
   },
 
   location: {
     label: "The Location",
 
-    title: "Connected to Everything, Surrounded by Nature",
+    title: "Connected to the whole city, surrounded by nature",
 
     description:
-      "Located on Cerro Nutibara, the residence offers quick access to Medellín's financial district, dining, entertainment and green spaces.",
+      "Located next to Cerro Nutibara, this residence offers quick access to Medellín's financial district, dining, entertainment and green spaces.",
 
-    walking: "Walking Distance",
+    walking: "Walking distance",
 
-    mapLabel: "Prime Location",
+    mapLabel: "Prime location",
+
+    mapTitle: "Map of the Cerro Nutibara area, Medellín",
 
     mapDescription:
-      "Perfectly positioned between the city's business, cultural and residential districts.",
+      "A strategic location between the administrative centre, El Poblado and the city's main corridors.",
 
     items: {
       alpujarra: "La Alpujarra",
@@ -203,47 +305,26 @@ const en = {
   privateViewing: {
     label: "Private Viewing",
 
-    title: "Experience El Cerro Boutique Residence in Person",
+    title: "Discover El Cerro Boutique Residence in person",
 
     description:
-      "Schedule a private visit and discover the architecture, finishes and lifestyle that make this residence truly unique.",
+      "Book a private viewing and experience first-hand the architecture, the finishes and the lifestyle that make this residence unique.",
 
-    responseTime: "Response within 1 hour",
+    responseTime: "Typical response time under 1 hour",
 
-    schedule: "Schedule a Private Visit",
+    priceLabel: "Price",
+    priceValue: "Upon request",
+    priceNote: "Get in touch and we will share the price and negotiation terms.",
 
-    brochure: "Property Brochure (Coming Soon)",
+    schedule: "Book a viewing on WhatsApp",
+    call: "Call now",
+    brochure: "Download brochure (PDF)",
   },
 
-  highlights: {
-    label: "The Residence",
-
-    title: "Space designed around the way you live",
-
-    description:
-      "A thoughtfully renovated residence where generous proportions, privacy and a privileged location come together.",
-
-    area: {
-      title: "144 m²",
-      description: "Generous private living area",
-    },
-
-    rooms: {
-      title: "3 · 3",
-      description: "Bedrooms · Bathrooms",
-    },
-
-    ceiling: {
-      value: "≈ 4 m",
-      title: "Double-height space",
-      description:
-        "An exceptional sense of space, openness and natural light.",
-    },
-
-    balconies: {
-      title: "3 Balconies",
-      description: "Private outdoor spaces",
-    },
+  footer: {
+    contactWhatsapp: "Message on WhatsApp",
+    contactPhone: "Call",
+    rights: "All rights reserved.",
   },
 };
 

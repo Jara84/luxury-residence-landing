@@ -1,0 +1,18 @@
+// Datos de contacto centralizados: cambiarlos aquí los cambia en toda la página.
+export const PHONE_E164 = "+573002276016";
+export const PHONE_DISPLAY = "+57 300 227 6016";
+export const WHATSAPP_NUMBER = "573002276016";
+
+export const SITE_URL = "https://elcerroresidence.com";
+
+const WA_TEXT_ES =
+  "Hola, vi El Cerro Boutique Residence en elcerroresidence.com y me gustaría agendar una visita privada.";
+const WA_TEXT_EN =
+  "Hi, I saw El Cerro Boutique Residence on elcerroresidence.com and I'd like to book a private viewing.";
+
+export function whatsappUrl(lang: string) {
+  const text = lang.startsWith("en") ? WA_TEXT_EN : WA_TEXT_ES;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+}
+
+export const phoneUrl = `tel:${PHONE_E164}`;
