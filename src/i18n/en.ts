@@ -5,6 +5,7 @@ const en = {
     gallery: "Gallery",
     views: "Views",
     location: "Location",
+    specs: "Key facts",
     visit: "Book a viewing",
     openMenu: "Open menu",
     closeMenu: "Close menu",
@@ -40,14 +41,14 @@ const en = {
         value: "3 · 3",
         title: "Bedrooms · Bathrooms",
         description:
-          "Master suite with walk-in closet and bathtub, plus two bedrooms and a double workstation.",
+          "Master suite with walk-in closet and a bathroom with tub, two further bedrooms and a double workstation open to the living area.",
       },
 
       ceiling: {
-        value: "≈ 4 m",
-        title: "Double height",
+        value: "4 m",
+        title: "Slab height",
         description:
-          "Third and top floor: height, light and privacy you will not find on a middle floor.",
+          "Four metres slab to slab. The technical ceiling conceals the air-conditioning ducts and insulates against the heat of the top floor, and the rooms still feel unusually tall.",
       },
     },
   },
@@ -88,7 +89,7 @@ const en = {
 
       pantry: {
         category: "Kitchen",
-        title: "Walk-in pantry",
+        title: "Generous walk-in pantry",
       },
 
       masterBedroom: {
@@ -103,12 +104,12 @@ const en = {
 
       bedroom2: {
         category: "Bedrooms",
-        title: "Second bedroom with balcony",
+        title: "Secondary bedroom with bespoke joinery",
       },
 
       masterBath: {
         category: "Bathrooms",
-        title: "Master bath with tub and double vanity",
+        title: "Master bath with double vanity and shower over the tub",
       },
 
       bath2: {
@@ -218,7 +219,8 @@ const en = {
     interior: {
       dishwasher: "Built-in dishwasher",
       kitchen: "Contemporary kitchen with island",
-      pantry: "Walk-in pantry",
+      pantry: "Generous walk-in pantry",
+      storage: "80 cm of linear storage between pantry and laundry",
       laundry: "Separate laundry room",
       airConditioning: "Dual 24,000 BTU air conditioning system",
     },
@@ -240,9 +242,9 @@ const en = {
       "Every design decision was carefully considered to combine architecture, comfort, technology and timeless elegance.",
 
     architecture: {
-      title: "Double-height architecture",
+      title: "Height and thermal insulation",
       description:
-        "Approximately 4-metre ceilings on the third and top floor create an exceptional sense of openness and light.",
+        "Four metres slab to slab on the top floor. The technical ceiling hides the air-conditioning ducts and works as insulation against the heat of the roof.",
     },
 
     balconies: {
@@ -254,13 +256,13 @@ const en = {
     masterSuite: {
       title: "Luxury master suite",
       description:
-        "Walk-in closet, bathtub, double vanity and premium finishes designed for maximum comfort.",
+        "Walk-in closet, tub with shower, double vanity and premium finishes designed for maximum comfort.",
     },
 
     smartLiving: {
       title: "Integrated technology",
       description:
-        "Built-in dishwasher, integrated charging stations, double workstation and smart storage solutions.",
+        "Built-in dishwasher, integrated charging stations, a double workstation and storage solved throughout the residence.",
     },
 
     climate: {
@@ -302,6 +304,36 @@ const en = {
     },
   },
 
+  specs: {
+    label: "Key facts",
+
+    title: "The numbers, with no small print",
+
+    description:
+      "Everything a buyer needs in order to decide whether it is worth coming to see it. We would rather you knew before you climbed the stairs.",
+
+    note:
+      "Built area is still being verified. All measurements are confirmed on site before any negotiation.",
+
+    items: {
+      price: { label: "Asking price", value: "COP $970,000,000" },
+      area: { label: "Private area", value: "144 m²" },
+      rooms: { label: "Bedrooms", value: "3" },
+      baths: { label: "Bathrooms", value: "3" },
+      balconies: { label: "Balconies", value: "3 private" },
+      floor: { label: "Floor", value: "Third of three · top floor" },
+      elevator: { label: "Lift", value: "The building has none" },
+      stratum: { label: "Socio-economic stratum", value: "5" },
+      admin: { label: "Building fees", value: "COP $916,000 per month, water included" },
+      year: { label: "Building", value: "1972, fully renovated in 2024" },
+      parking: { label: "Parking", value: "Private and covered, with EV charger" },
+      includes: {
+        label: "Included in the sale",
+        value: "Air conditioning units, curtains and bespoke furniture",
+      },
+    },
+  },
+
   privateViewing: {
     label: "Private Viewing",
 
@@ -312,13 +344,35 @@ const en = {
 
     responseTime: "Typical response time under 1 hour",
 
-    priceLabel: "Price",
-    priceValue: "Upon request",
-    priceNote: "Get in touch and we will share the price and negotiation terms.",
+    priceLabel: "Asking price",
+    priceValue: "COP $970,000,000",
+    priceNote: "Air conditioning units, curtains and bespoke furniture are included. Building fees are COP $916,000 per month, water included.",
 
     schedule: "Book a viewing on WhatsApp",
     call: "Call now",
     brochure: "Download brochure (PDF)",
+  },
+
+  form: {
+    description:
+      "Prefer email? Write to us and we will reply with the price, the full fact sheet and the viewing times available.",
+    name: "Name",
+    email: "Email address",
+    message: "Message",
+    messagePlaceholder: "Tell us what you would like to know",
+    submit: "Send enquiry",
+    sending: "Sending…",
+    success: "We have your message. You will hear back from us today.",
+    error:
+      "We could not send your message. Write to us on WhatsApp and we will help you right away.",
+  },
+
+  brochureGate: {
+    title: "We will send you the brochure",
+    description:
+      "Leave your name and email and we will open the full PDF. We only use it to answer you about this residence.",
+    submit: "Download",
+    cancel: "Cancel",
   },
 
   footer: {

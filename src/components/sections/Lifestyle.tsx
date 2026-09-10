@@ -10,6 +10,7 @@ import {
   Trees,
   WashingMachine,
   Snowflake,
+  Archive,
 } from "lucide-react";
 
 import Container from "../ui/Container";
@@ -63,6 +64,11 @@ export default function Lifestyle() {
                 <FeatureItem
                   icon={WashingMachine}
                   title={t("lifestyle.interior.laundry")}
+                />
+
+                <FeatureItem
+                  icon={Archive}
+                  title={t("lifestyle.interior.storage")}
                 />
 
                 <FeatureItem

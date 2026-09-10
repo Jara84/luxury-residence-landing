@@ -10,6 +10,7 @@ const LINKS = [
   { href: "#galeria", key: "header.gallery" },
   { href: "#vistas", key: "header.views" },
   { href: "#ubicacion", key: "header.location" },
+  { href: "#ficha", key: "header.specs" },
 ];
 
 export default function Header() {

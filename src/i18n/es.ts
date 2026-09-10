@@ -5,6 +5,7 @@ const es = {
     gallery: "Galería",
     views: "Vistas",
     location: "Ubicación",
+    specs: "Ficha técnica",
     visit: "Agendar visita",
     openMenu: "Abrir menú",
     closeMenu: "Cerrar menú",
@@ -40,14 +41,14 @@ const es = {
         value: "3 · 3",
         title: "Habitaciones · Baños",
         description:
-          "Suite principal con vestier y bañera, más dos habitaciones y zona de estudio doble.",
+          "Suite principal con vestier y baño con bañera, dos habitaciones adicionales y doble estación de trabajo integrada a la sala.",
       },
 
       ceiling: {
-        value: "≈ 4 m",
-        title: "Doble altura",
+        value: "4 m",
+        title: "Altura de losa",
         description:
-          "Tercer y último piso: altura, luz y privacidad que no se consiguen en un piso intermedio.",
+          "Cuatro metros de losa a losa. El cielo raso técnico oculta los ductos del aire y aísla del calor del último piso, y los espacios conservan una altura poco común.",
       },
     },
   },
@@ -88,7 +89,7 @@ const es = {
 
       pantry: {
         category: "Cocina",
-        title: "Alacena de despensa",
+        title: "Alacena amplia de despensa",
       },
 
       masterBedroom: {
@@ -103,12 +104,12 @@ const es = {
 
       bedroom2: {
         category: "Habitaciones",
-        title: "Segunda habitación con balcón",
+        title: "Habitación secundaria con carpintería a medida",
       },
 
       masterBath: {
         category: "Baños",
-        title: "Baño principal con bañera y doble lavamanos",
+        title: "Baño principal con doble lavamanos y bañera con ducha",
       },
 
       bath2: {
@@ -218,8 +219,9 @@ const es = {
     interior: {
       dishwasher: "Lavavajillas empotrado",
       kitchen: "Cocina contemporánea con isla",
-      pantry: "Alacena de despensa",
+      pantry: "Alacena amplia de despensa",
       laundry: "Zona de ropas independiente",
+      storage: "Almacenamiento lineal de 80 cm entre alacena y zona de ropas",
       airConditioning: "Sistema dual de aire acondicionado de 24.000 BTU",
     },
 
@@ -240,9 +242,9 @@ const es = {
       "Cada decisión de diseño y cada remodelación fueron cuidadosamente pensadas para combinar arquitectura, confort, tecnología y elegancia atemporal.",
 
     architecture: {
-      title: "Arquitectura de doble altura",
+      title: "Altura y aislamiento térmico",
       description:
-        "Aproximadamente 4 metros de altura en el tercer y último piso crean una extraordinaria sensación de amplitud y luminosidad.",
+        "Cuatro metros de losa a losa en el último piso. El cielo raso técnico esconde los ductos del aire acondicionado y funciona como aislamiento frente al calor de la cubierta.",
     },
 
     balconies: {
@@ -254,13 +256,13 @@ const es = {
     masterSuite: {
       title: "Master Suite de lujo",
       description:
-        "Vestier, bañera, doble lavamanos y acabados premium diseñados para el máximo confort.",
+        "Vestier, bañera con ducha, doble lavamanos y acabados premium diseñados para el máximo confort.",
     },
 
     smartLiving: {
       title: "Tecnología integrada",
       description:
-        "Lavavajillas empotrado, estaciones de carga integradas, estudio doble y soluciones inteligentes de almacenamiento.",
+        "Lavavajillas empotrado, estaciones de carga integradas, doble estación de trabajo y almacenamiento resuelto en toda la residencia.",
     },
 
     climate: {
@@ -302,6 +304,36 @@ const es = {
     },
   },
 
+  specs: {
+    label: "Ficha técnica",
+
+    title: "Los datos en limpio, sin letra menuda",
+
+    description:
+      "Todo lo que un comprador necesita para decidir si vale la pena venir a verlo. Preferimos que lo sepa antes de subir.",
+
+    note:
+      "El área construida está en proceso de verificación. Las medidas se confirman en sitio antes de cualquier negociación.",
+
+    items: {
+      price: { label: "Precio de venta", value: "$970.000.000" },
+      area: { label: "Área privada", value: "144 m²" },
+      rooms: { label: "Habitaciones", value: "3" },
+      baths: { label: "Baños", value: "3" },
+      balconies: { label: "Balcones", value: "3 privados" },
+      floor: { label: "Piso", value: "Tercero de tres · último" },
+      elevator: { label: "Ascensor", value: "El edificio no tiene" },
+      stratum: { label: "Estrato", value: "5" },
+      admin: { label: "Administración", value: "$916.000 al mes, agua incluida" },
+      year: { label: "Edificio", value: "1972, con remodelación integral en 2024" },
+      parking: { label: "Parqueadero", value: "Privado y cubierto, con cargador eléctrico" },
+      includes: {
+        label: "Incluido en la venta",
+        value: "Aires acondicionados, cortinas y muebles a la medida",
+      },
+    },
+  },
+
   privateViewing: {
     label: "Visita Privada",
 
@@ -312,13 +344,36 @@ const es = {
 
     responseTime: "Respuesta estimada en menos de 1 hora",
 
-    priceLabel: "Precio",
-    priceValue: "Bajo consulta",
-    priceNote: "Escríbanos y le compartimos el valor y las condiciones de negociación.",
+    priceLabel: "Precio de venta",
+    priceValue: "$970.000.000",
+    priceNote: "Incluye los aires acondicionados, las cortinas y los muebles a la medida. Administración de $916.000 mensuales con agua incluida.",
 
     schedule: "Agendar visita por WhatsApp",
     call: "Llamar ahora",
     brochure: "Descargar brochure (PDF)",
+  },
+
+  form: {
+    description:
+      "¿Prefiere el correo? Escríbanos y le respondemos con el valor, la ficha completa y los horarios de visita disponibles.",
+    name: "Nombre",
+    email: "Correo electrónico",
+    message: "Mensaje",
+    messagePlaceholder: "Cuéntenos qué le gustaría saber",
+    submit: "Enviar solicitud",
+    sending: "Enviando…",
+    success:
+      "Recibimos su mensaje. Le respondemos hoy mismo al correo que nos dejó.",
+    error:
+      "No pudimos enviar el mensaje. Escríbanos por WhatsApp y lo atendemos de una vez.",
+  },
+
+  brochureGate: {
+    title: "Le enviamos el brochure",
+    description:
+      "Déjenos su nombre y su correo y le abrimos el PDF completo. Lo usamos solo para responderle sobre esta residencia.",
+    submit: "Descargar",
+    cancel: "Cancelar",
   },
 
   footer: {

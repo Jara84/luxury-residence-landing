@@ -12,6 +12,7 @@ import Views from "./components/sections/Views";
 import Parking from "./components/sections/Parking";
 import Building from "./components/sections/Building";
 import TheLocation from "./components/sections/TheLocation";
+import Specs from "./components/sections/Specs";
 import PrivateViewing from "./components/sections/PrivateViewing";
 import Footer from "./components/layout/Footer";
 
@@ -34,6 +35,7 @@ function App() {
       <Parking />
       <Building />
       <TheLocation />
+      <Specs />
       <PrivateViewing />
       <Footer />
     </main>
