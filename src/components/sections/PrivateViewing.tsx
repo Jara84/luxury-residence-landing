@@ -1,11 +1,13 @@
 import { useTranslation } from "react-i18next";
-import { Clock3, Download, MessageCircle, Phone, Tag } from "lucide-react";
+import { Clock3, MessageCircle, Phone, Tag } from "lucide-react";
 
 import Container from "../ui/Container";
 import Section from "../ui/Section";
 import FadeIn from "../ui/FadeIn";
 import { PHONE_DISPLAY, phoneUrl, whatsappUrl } from "../../lib/contact";
-import { trackBrochure, trackCall, trackWhatsapp } from "../../lib/analytics";
+import { trackCall, trackWhatsapp } from "../../lib/analytics";
+import BrochureButton from "../ui/BrochureButton";
+import LeadForm from "../ui/LeadForm";
 
 export default function PrivateViewing() {
   const { t, i18n } = useTranslation();
@@ -79,16 +81,9 @@ export default function PrivateViewing() {
                 </span>
               </a>
 
-              <a
-                href="/brochure-el-cerro-boutique-residence.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={trackBrochure}
-                className="inline-flex items-center justify-center gap-3 rounded-2xl border border-stone-700 px-8 py-4 text-stone-300 no-underline transition-all duration-300 hover:-translate-y-1 hover:border-stone-500 hover:text-white"
-              >
-                <Download size={20} />
-                {t("privateViewing.brochure")}
-              </a>
+              <BrochureButton className="inline-flex items-center justify-center gap-3 rounded-2xl border border-stone-700 px-8 py-4 text-stone-300 no-underline transition-all duration-300 hover:-translate-y-1 hover:border-stone-500 hover:text-white" />
+
+              <LeadForm />
             </div>
           </div>
         </Container>
