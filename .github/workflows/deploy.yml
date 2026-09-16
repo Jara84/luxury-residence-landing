@@ -32,8 +32,12 @@ jobs:
       - name: Build application
         run: npm run build
         env:
-          # Configurar en GitHub > Settings > Secrets and variables > Actions > Variables
+          # Configurar en GitHub > Settings > Secrets and variables > Actions > Variables.
+          # Son identificadores públicos: acaban dentro del JS que descarga el
+          # visitante, así que van como Variables y no como Secrets.
           VITE_GA_ID: ${{ vars.VITE_GA_ID }}
+          VITE_META_PIXEL_ID: ${{ vars.VITE_META_PIXEL_ID }}
+          VITE_FORM_ENDPOINT: ${{ vars.VITE_FORM_ENDPOINT }}
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v6
