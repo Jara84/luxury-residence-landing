@@ -316,7 +316,7 @@ const en = {
       "Built area is still being verified. All measurements are confirmed on site before any negotiation.",
 
     items: {
-      price: { label: "Asking price", value: "COP $970,000,000" },
+      price: { label: "Asking price", value: "COP $890,000,000" },
       area: { label: "Private area", value: "144 m²" },
       rooms: { label: "Bedrooms", value: "3" },
       baths: { label: "Bathrooms", value: "3" },
@@ -345,7 +345,7 @@ const en = {
     responseTime: "Typical response time under 1 hour",
 
     priceLabel: "Asking price",
-    priceValue: "COP $970,000,000",
+    priceValue: "COP $890,000,000",
     priceNote: "Air conditioning units, curtains and bespoke furniture are included. Building fees are COP $916,000 per month, water included.",
 
     schedule: "Book a viewing on WhatsApp",

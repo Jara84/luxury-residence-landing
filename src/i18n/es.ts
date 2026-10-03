@@ -316,7 +316,7 @@ const es = {
       "El área construida está en proceso de verificación. Las medidas se confirman en sitio antes de cualquier negociación.",
 
     items: {
-      price: { label: "Precio de venta", value: "$970.000.000" },
+      price: { label: "Precio de venta", value: "$890.000.000" },
       area: { label: "Área privada", value: "144 m²" },
       rooms: { label: "Habitaciones", value: "3" },
       baths: { label: "Baños", value: "3" },
@@ -345,7 +345,7 @@ const es = {
     responseTime: "Respuesta estimada en menos de 1 hora",
 
     priceLabel: "Precio de venta",
-    priceValue: "$970.000.000",
+    priceValue: "$890.000.000",
     priceNote: "Incluye los aires acondicionados, las cortinas y los muebles a la medida. Administración de $916.000 mensuales con agua incluida.",
 
     schedule: "Agendar visita por WhatsApp",
